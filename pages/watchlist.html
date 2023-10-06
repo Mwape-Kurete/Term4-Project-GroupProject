@@ -1,56 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineScape - Watchlist</title>
 
     <!--stylesheet-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link href="../styles/main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link href="../style/main.css rel=" stylesheet">
 
 </head>
-<body class="bg-light-subtle text-emphasis-light">
+
+<body class="bg-dark-subtle">
     <!-- ---------------------------------------------------------------------------------------------------- -->
 
     <!-- START OF NAV SECTION -->
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
         <div class="container-fluid">
 
-          <a class="navbar-brand" href="../index.html">
-            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
-          </a>
-          
-          <div class="logoTxt">
-            <h1>CineScape</h1>
-          </div>
+            <a class="navbar-brand" href="../index.html">
+                <img src="" alt="logo" width="30" height="24">
+            </a>
 
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Watchlist</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Library</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">About US</a>
-              </li>
+
+            <h1 class="justify-content-center">CineScape</h1>
+
+
+            <ul class="nav nav-underline justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Library</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="watchlist.html">Watchlist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">About Us</a>
+                </li>
             </ul>
-          </div>
-        
+
         </div>
-      </nav>
+    </nav>
     <!-- END OF NAV SECTION -->
 
     <!-- ---------------------------------------------------------------------------------------------------- -->
 
-    <!-- --------------------end of body <js scripts below>---------------------- -->
+    <!-- START OF BODY CONTENT -->
+    <section class="watchlist-content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12">
+                    <h1>Your Watchlist</h1>
+                </div>
+            </div>
+            <!-- start of watchlist Cards -->
+            <div class="row">
+                <div class="col-3">
+                    <div class="card rounded-4" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h4>Title</h4>
+                            <h6>Release Date</h6>
+                            <p class="card-text">Cast: John Doe, Claire T, Hulk</p>
+                            <p class="text-body-tertiary">Rating</p>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-warning me-md-2" type="button">Button</button>
+                                <button class="btn btn-warning" type="button"><i class="bi bi-eye"></i></button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of watchlist Cards - -->
+        </div>
+    </section>
+    <!-- END OF BODY CONTENT -->
+
+    <!-- ------------------------------------- end of body <js scripts below -------------------------------- -->
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
@@ -62,6 +95,7 @@
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="../scripts/main.js"></script>
+    <script src="../script/main.js"></script>
 </body>
+
 </html>
