@@ -4,11 +4,23 @@ body{
 }
 .navbar-custom{
     background-color: #721E1E;
-    color: #C07241;
 }
 
 .webName{
     color: #DDC192;
+}
+
+.nav-link-custom{
+    text-decoration: none;
+    color: #C07241;
+}
+
+.nav-link-custom:hover{
+    color: #C07241;
+}
+
+.active{
+    color: #C07241;
 }
 /* MWAPE - WATCHLIST CSS */
 
