@@ -1,0 +1,176 @@
+body{
+    background-image: url(assets/images/Screenshot\ 2023-10-08\ 204845.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    
+}
+
+@media(min-aspect-ratio:16/9){
+    .back-video{
+        width: 1920px;
+        height: 100%;
+    }
+}
+
+
+.nav-link{
+    font-family: 'Italiana', serif;
+    color: wheat;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+  color: #0b1612;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid whitesmoke;
+  color: white;
+}
+
+.toggle{
+    margin-top: -100px;
+    padding-left: 50px;
+}
+
+
+
+.toggle ul{
+    list-style: none;
+    width: 276px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(45px);
+    margin-left: 30px;
+}
+
+.toggle li{
+    float: left;
+    margin-left: 80px;
+    background-color: red;
+    margin-top: -37px;
+}
+
+.up{
+    font-family: 'Roboto', sans-seri;
+    margin-top: 100px;
+    margin-left: 400px;
+}
+
+.up h1{
+    font-size: 250px;
+}
+
+.form{
+    margin-left: 290px;
+    margin-top: 100px;
+}
+
+.form h3{
+    padding-left: 30px;
+    color: white;
+}
+
+.form-input{
+    width: 280px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 70px;
+    border: 2px solid #000;
+    background: rgba(30, 30, 30, 0.00);
+    
+}
+
+.choose{
+    width: 280px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 70px;
+    border: 2px solid #000;
+    background: rgba(30, 30, 30, 0.00);
+    
+}
+
+.Username{
+    margin-left: 340px;
+    margin-top: -100px;
+}
+
+.password{
+    margin-left: 340px;
+    margin-top: 30px;
+}
+
+.Confirm{
+    margin-left: 670px;
+    margin-top: -155px;
+}
+
+.choose{
+    margin-left: 668px;
+    margin-top: 34px;
+}
+
+
+
+.sign {
+    margin-bottom: 8px;
+}
+
+
+.sign2 h4{
+    margin-left: 70px;
+    margin-top: 120px;
+}
+
+.sign-link{
+    color: blue;
+    text-decoration: none;
+    background-color: black;
+}
+
+.sign-link2{
+    color: blue;
+    text-decoration: none;
+    background-color: black;
+    margin-left: 200px;
+}
+
+.sign3{
+    font-family: 'Roboto', sans-seri;
+    margin-left: -60px;
+    width: 163px;
+    height: 60px;
+   
+    border-radius: 60px;
+}
+
+.sign3 h4{
+    margin-top: -10px;
+    margin-left: 45px;
+    width: 200px;
+}
+
+.button{
+    margin-top: 40px;
+    margin-left: 730px;
+}
+
+.password2{
+    margin-left: 698px;
+    margin-top: 50px;
+}
+
+
+
+
+
