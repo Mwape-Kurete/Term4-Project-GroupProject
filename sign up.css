@@ -58,7 +58,7 @@
 .toggle li{
     float: left;
     margin-top: 13px;
-    background-color: red;
+    background-color: #721e1e;
     margin-top: -1px;
     margin-left: -50px;
 }
@@ -67,11 +67,12 @@
     font-family: 'Roboto', sans-seri;
     margin-top: 100px;
     margin-left: 400px;
+    color: #ddc192;
 }
 
 .up h1{
     font-size: 250px;
-    color: white;
+    color: #ddc192;
 }
 
 .form{
@@ -155,13 +156,13 @@
 }
 
 .sign-link{
-    color: blue;
+    color: #c07241;
     text-decoration: none;
     background-color: black;
 }
 
 .sign-link2{
-    color: blue;
+    color: #c07241;
     text-decoration: none;
     background-color: black;
     margin-left: 200px;

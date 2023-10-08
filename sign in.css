@@ -56,7 +56,7 @@ body{
 .toggle li{
     float: left;
     margin-left: 80px;
-    background-color: red;
+    background-color:#ddc192;
     margin-top: -37px;
 }
 
@@ -64,6 +64,7 @@ body{
     font-family: 'Roboto', sans-seri;
     margin-top: 100px;
     margin-left: 400px;
+    color: #721e1e;
 }
 
 .up h1{
@@ -85,7 +86,7 @@ body{
     height: 60px;
     flex-shrink: 0;
     border-radius: 70px;
-    border: 2px solid #000;
+    border: 2px solid #721e1e;
     background: rgba(30, 30, 30, 0.00);
     
 }
@@ -133,13 +134,13 @@ body{
 }
 
 .sign-link{
-    color: blue;
+    color: #c07241;
     text-decoration: none;
     background-color: black;
 }
 
 .sign-link2{
-    color: blue;
+    color:#c07241;
     text-decoration: none;
     background-color: black;
     margin-left: 200px;
@@ -170,7 +171,11 @@ body{
     margin-top: 50px;
 }
 
-
+.btn{
+    background-color: #721e1e;
+    font-family: 'Roboto', sans-seri;
+    
+}
 
 
 
