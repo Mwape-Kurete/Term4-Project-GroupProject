@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Coustard&family=Montserrat&family=Oswald:wght@600&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coustard&family=Montserrat&family=Oswald:wght@600&family=Poppins:wght@600&family=Russo+One&display=swap');
+
+h1{
+    font-family: "Coustard";
+
+}
+
+
+.carousel-item{
+    background-color: #E6F2E9;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    top: auto;
+    right: auto;
+    left: 24px;
+    bottom: 24px;
+    width: auto;
+    background-color: white;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.carousel-control-next{
+    left: 84px;
+}
+
+footer {
+    background-color: #1d1d1d; 
+    color: #fff; 
+    padding: 40px 0; 
+}
+
+footer address {
+    font-size: 1rem;
+}
