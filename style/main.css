@@ -118,9 +118,7 @@ ul{
 }
 
 .show-more-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
 }
 
 .btn-outline-danger, .btn.disabled, .btn:disabled, fieldset:disabled .btn {
