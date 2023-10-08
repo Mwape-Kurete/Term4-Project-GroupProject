@@ -1,36 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Coustard&family=Montserrat&family=Oswald:wght@600&family=Russo+One&display=swap');
+/* CSS STARTS HERE */
+body{
+    background-color: #DDC192;
+}
+.navbar-custom{
+    background-color: #721E1E;
+}
 
-h1{
-    font-family: "Coustard";
+.webName{
+    color: #DDC192;
+    font-family: 'Coustard', serif;
+    text-align: center;
+}
 
+.nav-center{
+    margin: 0 auto;
+}
+
+.cont-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link-custom{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-decoration: none;
+    color: #C07241;
+}
+
+.nav-link-custom:hover{
+    color: #C07241;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+ul{
+    margin-right: 40px;
+}
+
+.active{
+    color: #C07241;
+}
+/* ---------------------------------------------------------------- */
+/* MWAPE - WATCHLIST CSS */
+
+.heading-watch-row{
+    padding-right: 0;
 }
 
 
-.carousel-item{
-    background-color: #E6F2E9;
+.heading-watch-col{
+    padding-left: 0;
 }
 
-.carousel-control-next, .carousel-control-prev {
-    top: auto;
-    right: auto;
-    left: 24px;
-    bottom: 24px;
-    width: auto;
-    background-color: white;
-    padding: 12px;
-    border-radius: 50%;
+.pgHeading{
+    font-family: 'Poppins', sans-serif;
+    color: #721E1E;
+    padding-top: 8px;
+    margin-left: 0;
+    margin-top: 40px;
 }
 
-.carousel-control-next{
-    left: 84px;
+.nav-link.disabled, .nav-link:disabled{
+    color: #3b0f0f;
 }
 
-footer {
-    background-color: #1d1d1d; 
-    color: #fff; 
-    padding: 40px 0; 
+
+.nav-underline .nav-link.active, .nav-underline .show>.nav-link{
+    font-weight: 700;
+    color: #DDC192;
+    border-bottom-color: currentcolor;
 }
 
-footer address {
-    font-size: 1rem;
+.card{
+    --bs-card-bg: #29485D;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
+
+.card-body h4{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.card-body h6, p{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: beige;
+}
+
+.text-body-tertiary {
+    --bs-text-opacity: 1;
+    color: #3b0f0f;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.btnBookmark{
+    background-color: #721E1E;
+    border-color: #DDC192;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.btnBookmark:hover{
+    background-color: #DDC192;
+    border-color: #DDC192;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.btnWatched{
+    background-color: #DDC192;
+    border-color: #721E1E;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.btnWatched:hover{
+    background-color: #721E1E;
+    border-color: #721E1E;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.show-more-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-outline-danger, .btn.disabled, .btn:disabled, fieldset:disabled .btn {
+    background-color: #3b0f0f;
+    color: #DDC192;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+
+/* 
+font-family: 'Coustard', serif;
+font-family: 'M PLUS Rounded 1c', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+ */
+
+/* END OF MWAPE WATCHLIST CSS */
+
+/* -------------------------------------------------------------------------- */
