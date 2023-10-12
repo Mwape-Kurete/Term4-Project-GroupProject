@@ -1,7 +1,8 @@
 /* CSS STARTS HERE */
 body{
-    background-color: #DDC192;
+    background-color: white;
 }
+
 .navbar-custom{
     background-color: #721E1E;
 }
@@ -129,7 +130,6 @@ ul{
     border: none;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
-
 
 /* 
 font-family: 'Coustard', serif;
