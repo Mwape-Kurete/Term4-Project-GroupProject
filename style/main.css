@@ -44,6 +44,10 @@ ul{
 /* ---------------------------------------------------------------- */
 /* MWAPE - WATCHLIST CSS */
 
+.logoTxt{
+    margin-left: 10%;
+}
+
 .heading-watch-row{
     padding-right: 0;
 }
@@ -151,5 +155,12 @@ font-family: 'Poppins', sans-serif;
  */
 
 /* END OF MWAPE WATCHLIST CSS */
+
+/* START OF MWAPE LIBBRARY CSS */
+
+.radioBTN{
+    margin-right: 1%;
+}
+/* END OF MWAPE LIBRARY CSS   */
 
 /* -------------------------------------------------------------------------- */

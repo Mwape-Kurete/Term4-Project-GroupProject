@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Mwape Kurte - 231115">
+    <meta name="author" content="Mwape Kurete - 231115">
     <meta name="description" content="Class 1 Group 1 Project - Page assigned to Mwape Kurete 231115">
-    <title>CineScape - Watchlist</title>
+    <title>CineScape - Movie Library</title>
 
     <!--stylesheet-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,7 +19,6 @@
 
 
     <link href="../style/main.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -44,10 +43,10 @@
                     <a class="nav-link nav-link-custom" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-custom" href="/pages/library.html">Library</a>
+                    <a class="nav-link active nav-link-custom" aria-current="page" href="library.html">Library</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active nav-link-custom" aria-current="page" href="watchlist.html">Watchlist</a>
+                    <a class="nav-link nav-link-custom" href="/pages/watchlist.html">Watchlist</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled nav-link-custom" aria-disabled="true">About Us</a>
@@ -60,43 +59,56 @@
 
     <!-- ---------------------------------------------------------------------------------------------------- -->
 
+    <!-- ---------------------------------------------------------------------------------------------------- -->
     <!-- START OF BODY CONTENT -->
-    <section class="watchlist-content">
+
+    <section class="movie-lib-grid">
+
+        <!-- Start of Library Section -->
         <div class="container">
 
-            <div class="row justify-content-lg-start heading-watch-row">
+            <!-- Page Header Start -->
+            <div class="row justify-content-lg-start heading-watch-row py-4">
                 <div class="col-12 heading-watch-col">
-                    <h1 class="pgHeading">Your Watchlist,</h1>
+                    <h1 class="pgHeading">Our Movie Library</h1>
                 </div>
             </div>
+            <!-- Page Header End -->
 
-            <!-- start of watchlist Cards -->
-            <div class="row watchlist-mov py-5">
-                <div class="col-3 d-flex align-items-stretch">
-                    <div class="card rounded-4" style="width: 18rem;">
-                        <img src="../assets/images/Awesome Art We've Found Around The Net_Dracula, The Shining, Walking Dead.jpeg"
-                            class="card-img-top" alt="The Shining Poster">
-                        <div class="card-body d-flex flex-column">
-                            <h4>The Shining</h4>
-                            <h6>1980 - 2h 26min - Horror/Thriller</h6>
-                            <p class="card-text">Director: Stanley Kubrick</p>
-                            <p class="text-body-tertiary rating">83% - Rotten Tomatoes</p>
+            <!-- Filters section START -->
 
-                            <!-- icons -->
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
-                                <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
-                                        src="../assets/icons/bookmark-check.svg" width="25px" height="25px"></button>
-                                <button class="btn btn-warning btnWatched" type="button"><img
-                                        src="../assets/icons/eye.svg" width="25px" height="25px"></button>
-                            </div>
-                            <p>
+            <!-- RADIO BUTTONS START -->
+            <div class="btn-group tn-group-sm py-4 radioBTN" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="btnradio1">Filter 1</label>
 
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio2">Filter 2</label>
 
-                <div class="col-3 d-flex align-items-stretch">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio3">Filter 3</label>
+            </div>
+            <!-- RADIO BUTTONS END -->
+
+            <!-- CHECK BUTTONS START -->
+            <div class="btn-group tn-group-sm py-4" role="group" aria-label="Basic checkbox toggle button group">
+                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+              
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+              
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+            </div>
+            <!-- CHECK BUTTONS END -->
+
+
+            <!-- Filters section END -->
+
+            <!-- START OF LIBRARY -->
+            <div class="row row-cols-4 py-4">
+                <div class="col py-4">
                     <div class="card rounded-4" style="width: 18rem;">
                         <img src="../assets/images/Kevin Carter.jpeg" class="card-img-top" alt="The Shining Poster">
                         <div class="card-body d-flex flex-column">
@@ -115,15 +127,14 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-3 d-flex align-items-stretch">
+                <div class="col py-4">
                     <div class="card rounded-4" style="width: 18rem;">
-                        <img src="../assets/images/WHIPLASH.jpeg" class="card-img-top" alt="The Shining Poster">
+                        <img src="../assets/images/Kevin Carter.jpeg" class="card-img-top" alt="The Shining Poster">
                         <div class="card-body d-flex flex-column">
-                            <h4>Whiplash</h4>
-                            <h6>2014 - 1h 47min - Indie/Drama</h6>
-                            <p class="card-text">Director: Damien Chazelle</p>
-                            <p class="text-body-tertiary rating">94% - Rotten Tomatoes</p>
+                            <h4>Get Out</h4>
+                            <h6>2017 - 1h 44min - Horror/Thriller</h6>
+                            <p class="card-text">Director: Jordan Peele</p>
+                            <p class="text-body-tertiary rating">98% - Rotten Tomatoes</p>
 
                             <!-- icons -->
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
@@ -132,22 +143,55 @@
                                 <button class="btn btn-warning btnWatched" type="button"><img
                                         src="../assets/icons/eye.svg" width="25px" height="25px"></button>
                             </div>
-                            <p>
-
-                            </p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-3 d-flex align-items-stretch">
+                <div class="col py-4">
                     <div class="card rounded-4" style="width: 18rem;">
-                        <img src="../assets/images/The Green Knight (2021).jpeg" class="card-img-top"
-                            alt="The Shining Poster">
+                        <img src="../assets/images/Kevin Carter.jpeg" class="card-img-top" alt="The Shining Poster">
                         <div class="card-body d-flex flex-column">
-                            <h4>The Green Knight</h4>
-                            <h6>2021 - 2h 06min - Adventure</h6>
-                            <p class="card-text">Director: David Lowery</p>
-                            <p class="text-body-tertiary rating">89% - Rotten Tomatoes</p>
+                            <h4>Get Out</h4>
+                            <h6>2017 - 1h 44min - Horror/Thriller</h6>
+                            <p class="card-text">Director: Jordan Peele</p>
+                            <p class="text-body-tertiary rating">98% - Rotten Tomatoes</p>
+
+                            <!-- icons -->
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
+                                <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
+                                        src="../assets/icons/bookmark-check.svg" width="25px" height="25px"></button>
+                                <button class="btn btn-warning btnWatched" type="button"><img
+                                        src="../assets/icons/eye.svg" width="25px" height="25px"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col py-4">
+                    <div class="card rounded-4" style="width: 18rem;">
+                        <img src="../assets/images/Kevin Carter.jpeg" class="card-img-top" alt="The Shining Poster">
+                        <div class="card-body d-flex flex-column">
+                            <h4>Get Out</h4>
+                            <h6>2017 - 1h 44min - Horror/Thriller</h6>
+                            <p class="card-text">Director: Jordan Peele</p>
+                            <p class="text-body-tertiary rating">98% - Rotten Tomatoes</p>
+
+                            <!-- icons -->
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
+                                <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
+                                        src="../assets/icons/bookmark-check.svg" width="25px" height="25px"></button>
+                                <button class="btn btn-warning btnWatched" type="button"><img
+                                        src="../assets/icons/eye.svg" width="25px" height="25px"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col py-4">
+                    <div class="card rounded-4" style="width: 18rem;">
+                        <img src="../assets/images/Kevin Carter.jpeg" class="card-img-top" alt="The Shining Poster">
+                        <div class="card-body d-flex flex-column">
+                            <h4>Get Out</h4>
+                            <h6>2017 - 1h 44min - Horror/Thriller</h6>
+                            <p class="card-text">Director: Jordan Peele</p>
+                            <p class="text-body-tertiary rating">98% - Rotten Tomatoes</p>
 
                             <!-- icons -->
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
@@ -160,18 +204,12 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- end of watchlist Cards - -->
-            
-            <div class=" row showMoreBtn justify-content-center py-5">
-                <div class="col-12 show-more-btn">
-                    <button class="btn btn-outline-danger" disabled>Show More</button>
-                </div>
-            </div>
-
+            <!-- END OF LIBRARY -->
         </div>
+        <!-- End of Library Section -->
     </section>
-    <!-- END OF BODY CONTENT -->
+
+    <!-- END OF BODY CONTENT - -->
 
     <!-- ------------------------------------- end of body <js scripts below -------------------------------- -->
     <!-- scripts -->
@@ -186,6 +224,7 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="../script/main.js"></script>
+
 </body>
 
 </html>
