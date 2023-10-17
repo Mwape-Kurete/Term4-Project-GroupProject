@@ -17,7 +17,11 @@
         href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&family=M+PLUS+Rounded+1c:wght@100;300;400;500&family=Poppins:wght@600&display=swap"
         rel="stylesheet">
 
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&family=Coustard:wght@900&family=Libre+Franklin:ital,wght@0,600;1,300&family=Pridi:wght@200;500;600&display=swap"
+        rel="stylesheet">
     <link href="../style/main.css" rel="stylesheet">
 </head>
 
@@ -94,10 +98,10 @@
             <div class="btn-group tn-group-sm py-4" role="group" aria-label="Basic checkbox toggle button group">
                 <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
                 <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
-              
+
                 <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
                 <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
-              
+
                 <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
                 <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
             </div>
@@ -107,102 +111,29 @@
             <!-- Filters section END -->
 
             <!-- START OF LIBRARY -->
-            <div class="row row-cols-4 py-4">
-                <div class="col py-4">
+            <div class="row row-cols-4 py-4 library-mov">
+                <div class="col d-flex align-items-stretch py-4">
                     <div class="card rounded-4" style="width: 18rem;">
-                        <img src="../assets/images/Kevin Carter.jpeg" class="card-img-top" alt="The Shining Poster">
+                        <img src="../assets/images/Kevin Carter.jpeg" class="card-img-top" alt="Get Out Poster" id="poster">
                         <div class="card-body d-flex flex-column">
-                            <h4>Get Out</h4>
-                            <h6>2017 - 1h 44min - Horror/Thriller</h6>
-                            <p class="card-text">Director: Jordan Peele</p>
-                            <p class="text-body-tertiary rating">98% - Rotten Tomatoes</p>
+                            <h4 class="lblMovName py-3" id="title">Get Out</h4>
+                            <h5 class="lblMeta" id="year">2017</h5>
+                            <h5 class="lblMeta" id="duration">- 1h 44min</h5>
+                            <h5 class="lblMeta" id="genre">- Horror/Thriller</h5>
+                            <p class="card-text" id="director">Director: Jordan Peele</p>
+                            <h6 class="imd-score" id="rating">98% - Rotten Tomatoes</h6>
 
                             <!-- icons -->
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
                                 <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
-                                        src="../assets/icons/bookmark-check.svg" width="25px" height="25px"></button>
+                                        src="../assets/icons/bookmark-check.svg" width="25px" height="25px" id="bookmark"></button>
                                 <button class="btn btn-warning btnWatched" type="button"><img
-                                        src="../assets/icons/eye.svg" width="25px" height="25px"></button>
+                                        src="../assets/icons/eye.svg" width="25px" height="25px" id="watch"></button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col py-4">
-                    <div class="card rounded-4" style="width: 18rem;">
-                        <img src="../assets/images/Kevin Carter.jpeg" class="card-img-top" alt="The Shining Poster">
-                        <div class="card-body d-flex flex-column">
-                            <h4>Get Out</h4>
-                            <h6>2017 - 1h 44min - Horror/Thriller</h6>
-                            <p class="card-text">Director: Jordan Peele</p>
-                            <p class="text-body-tertiary rating">98% - Rotten Tomatoes</p>
-
-                            <!-- icons -->
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
-                                <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
-                                        src="../assets/icons/bookmark-check.svg" width="25px" height="25px"></button>
-                                <button class="btn btn-warning btnWatched" type="button"><img
-                                        src="../assets/icons/eye.svg" width="25px" height="25px"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col py-4">
-                    <div class="card rounded-4" style="width: 18rem;">
-                        <img src="../assets/images/Kevin Carter.jpeg" class="card-img-top" alt="The Shining Poster">
-                        <div class="card-body d-flex flex-column">
-                            <h4>Get Out</h4>
-                            <h6>2017 - 1h 44min - Horror/Thriller</h6>
-                            <p class="card-text">Director: Jordan Peele</p>
-                            <p class="text-body-tertiary rating">98% - Rotten Tomatoes</p>
-
-                            <!-- icons -->
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
-                                <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
-                                        src="../assets/icons/bookmark-check.svg" width="25px" height="25px"></button>
-                                <button class="btn btn-warning btnWatched" type="button"><img
-                                        src="../assets/icons/eye.svg" width="25px" height="25px"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col py-4">
-                    <div class="card rounded-4" style="width: 18rem;">
-                        <img src="../assets/images/Kevin Carter.jpeg" class="card-img-top" alt="The Shining Poster">
-                        <div class="card-body d-flex flex-column">
-                            <h4>Get Out</h4>
-                            <h6>2017 - 1h 44min - Horror/Thriller</h6>
-                            <p class="card-text">Director: Jordan Peele</p>
-                            <p class="text-body-tertiary rating">98% - Rotten Tomatoes</p>
-
-                            <!-- icons -->
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
-                                <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
-                                        src="../assets/icons/bookmark-check.svg" width="25px" height="25px"></button>
-                                <button class="btn btn-warning btnWatched" type="button"><img
-                                        src="../assets/icons/eye.svg" width="25px" height="25px"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col py-4">
-                    <div class="card rounded-4" style="width: 18rem;">
-                        <img src="../assets/images/Kevin Carter.jpeg" class="card-img-top" alt="The Shining Poster">
-                        <div class="card-body d-flex flex-column">
-                            <h4>Get Out</h4>
-                            <h6>2017 - 1h 44min - Horror/Thriller</h6>
-                            <p class="card-text">Director: Jordan Peele</p>
-                            <p class="text-body-tertiary rating">98% - Rotten Tomatoes</p>
-
-                            <!-- icons -->
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
-                                <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
-                                        src="../assets/icons/bookmark-check.svg" width="25px" height="25px"></button>
-                                <button class="btn btn-warning btnWatched" type="button"><img
-                                        src="../assets/icons/eye.svg" width="25px" height="25px"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <!-- END OF LIBRARY -->
         </div>

@@ -82,21 +82,30 @@ ul{
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
-.card-body h4{
-    font-family: 'Poppins', sans-serif;
-    color: beige;
+.lblMeta{
+    font-family: 'Libre Franklin', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 95%;
+    color: #FFF1D6;
 }
 
-.card-body h6, p{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    color: beige;
-}
-
-.text-body-tertiary {
-    --bs-text-opacity: 1;
+.lblMovName{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
     color: #C17817;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+
+#director{
+    color: beige;
+    font-family: 'Alice', serif;
+}
+
+#rating{
+    color: #88530f;
+    font-family: 'Alice', serif;
+}
+
 
 .btnBookmark{
     background-color: #C17817;
@@ -136,7 +145,8 @@ ul{
 }
 
 .icons-cont{
-    position: absolute;
+    margin-top: 15%;
+    
     bottom: 0;
     right: 0;
     margin-bottom: 20px;
@@ -152,6 +162,12 @@ font-family: 'Coustard', serif;
 font-family: 'M PLUS Rounded 1c', sans-serif;
 font-family: 'Poppins', sans-serif;
 
+
+new fonts 
+font-family: 'Alice', serif;
+font-family: 'Coustard', serif;
+font-family: 'Libre Franklin', sans-serif;
+font-family: 'Pridi', serif;
  */
 
 /* END OF MWAPE WATCHLIST CSS */
