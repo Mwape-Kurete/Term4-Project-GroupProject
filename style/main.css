@@ -1,14 +1,14 @@
 /* CSS STARTS HERE */
 body{
-    background-color: white;
+    background-color: #FFF1D6 !important;
 }
 
 .navbar-custom{
-    background-color: #721E1E;
+    background-color: #566246;
 }
 
 .webName{
-    color: #DDC192;
+    color: #FFF1D6;
     font-family: 'Coustard', serif;
     text-align: center;
 }
@@ -26,11 +26,11 @@ body{
 .nav-link-custom{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-decoration: none;
-    color: #C07241;
+    color: #C17817;
 }
 
 .nav-link-custom:hover{
-    color: #C07241;
+    color: #650D1B;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
@@ -39,7 +39,7 @@ ul{
 }
 
 .active{
-    color: #C07241;
+    color: #FFF1D6;
 }
 /* ---------------------------------------------------------------- */
 /* MWAPE - WATCHLIST CSS */
@@ -59,7 +59,7 @@ ul{
 
 .pgHeading{
     font-family: 'Poppins', sans-serif;
-    color: #721E1E;
+    color: #650D1B;
     padding-top: 8px;
     margin-left: 0;
     margin-top: 40px;
@@ -77,14 +77,14 @@ ul{
 }
 
 .card{
-    --bs-card-bg: #29485D;
+    --bs-card-bg: #38423B;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
 .card-body h4{
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: beige;
 }
 
 .card-body h6, p{
@@ -94,31 +94,31 @@ ul{
 
 .text-body-tertiary {
     --bs-text-opacity: 1;
-    color: #3b0f0f;
+    color: #C17817;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .btnBookmark{
-    background-color: #721E1E;
-    border-color: #DDC192;
+    background-color: #C17817;
+    border-color: #C17817;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .btnBookmark:hover{
-    background-color: #DDC192;
-    border-color: #DDC192;
+    background-color: #FFF1D6;
+    border-color: #FFF1D6;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .btnWatched{
-    background-color: #DDC192;
-    border-color: #721E1E;
+    background-color: #C17817;
+    border-color: #C17817;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .btnWatched:hover{
-    background-color: #721E1E;
-    border-color: #721E1E;
+    background-color: #FFF1D6;
+    border-color: #FFF1D6;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
@@ -129,7 +129,7 @@ ul{
 }
 
 .btn-outline-danger, .btn.disabled, .btn:disabled, fieldset:disabled .btn {
-    background-color: #3b0f0f;
+    background-color: #650D1B;
     color: #DDC192;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
