@@ -1,0 +1,74 @@
+body{
+    background-color: white;
+}
+
+.navbar-custom{
+    background-color: #721E1E;
+}
+
+h1{
+    font-family: 'Coustard', serif;
+    font-weight: 600;
+    color: #29485D;
+}
+
+h5{
+    color: #E6F2E9;
+}
+
+.webName{
+    color: #DDC192;
+    font-family: 'Coustard', serif;
+    text-align: center;
+}
+
+.card{
+    --bs-card-bg: #29485D;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.card-body h4{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.card-body h6, p{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: beige;
+}
+
+.text-body-tertiary {
+    --bs-text-opacity: 1;
+    color: #3b0f0f;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.carousel-item{
+    background-color: #E6F2E9;
+}
+
+.carousel-caption {
+    color: white; 
+}
+
+.carousel-control-next, .carousel-control-prev {
+    top: auto;
+    right: auto;
+    left: 24px;
+    bottom: 24px;
+    width: auto;
+    background-color: white;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.carousel-control-next{
+    left: 84px;
+}
+
+footer {
+    background-color: #721E1E; 
+    color: #fff; 
+    padding: 40px 0; 
+}
