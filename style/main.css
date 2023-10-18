@@ -188,6 +188,11 @@ font-family: 'Pridi', serif;
     border-color: #650D1B;
     color: #650D1B;
 }
+
+.btn-outline-primary:hover{
+    border-color: #C17817;
+    color: #C17817;
+}
 /* END OF MWAPE LIBRARY CSS   */
 
 /* -------------------------------------------------------------------------- */
