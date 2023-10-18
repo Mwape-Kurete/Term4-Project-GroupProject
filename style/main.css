@@ -177,6 +177,17 @@ font-family: 'Pridi', serif;
 .radioBTN{
     margin-right: 1%;
 }
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    background-color: #650D1B;
+    border-color: #650D1B;
+    color: #FFF1D6;
+}
+
+.btn-outline-primary{
+    border-color: #650D1B;
+    color: #650D1B;
+}
 /* END OF MWAPE LIBRARY CSS   */
 
 /* -------------------------------------------------------------------------- */
