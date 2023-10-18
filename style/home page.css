@@ -88,6 +88,6 @@ footer {
 body {
     margin: 0;
     padding: 0;
-    height: 200vh; /* To make the content longer for scrolling */
-    transition: background-color 1.1s; /* Add a smooth transition for background color change */
+    height: 200vh; 
+    transition: background-color 2.1s; 
 }
