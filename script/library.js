@@ -22,7 +22,7 @@ function getMovieDetailsByRadio(radio){
         dataType: 'json',
         success: function(data) {
 
-            const movie = data.details.map(movie => ({
+            const movie = data.map(movie => ({
                 id: movie.id,
                 title: movie.original_title, 
                 year: movie.release_date,
@@ -65,6 +65,6 @@ function displayMovies(movie) {
     </div>`)
 
     libraryContainer.append(card);
-    
+
     });
 }
