@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    getMovieDetailsByRadio('top_rated');
 
 
 });
@@ -22,7 +23,7 @@ function getMovieDetailsByRadio(radio){
         dataType: 'json',
         success: function(data) {
 
-            const movie = data.map(movie => ({
+            const movie = data.details.map(movie => ({
                 id: movie.id,
                 title: movie.original_title, 
                 year: movie.release_date,
@@ -30,6 +31,7 @@ function getMovieDetailsByRadio(radio){
             }))
 
             console.log(movie);
+            displayMovies(movie);
 
         }, error: function(error) {
             console.error('Errror:', error)
