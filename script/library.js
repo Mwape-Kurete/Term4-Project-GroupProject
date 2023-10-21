@@ -11,16 +11,26 @@ $(document).ready(function () {
 
 });
 
-$("input[name='btnCheck']").click(function() {
+function returnSelectOption() {
+    var testVal = document.getElementsByName('btnCheck');
+    let chosen;
+    for (i = 0; i < testVal.length; i++) {
 
-    const selectOption = $(this).attr('value'); 
+        if (testVal[i].checked){
 
-    getMovieData(selectOption);
+            chosen = testVal[i];
+            console.log(chosen);
+        }
+            
+    }
 
-});
+    return chosen;
+}
 
-function getMovieData(selectOption) {
 
+function getMovieData() {
+
+    selectOption = returnSelectOption();
 
     const apiUrl = `${BASE_URL}/${selectOption}/${API_KEY}`;
 
@@ -38,6 +48,7 @@ function showMovieData(data){
     movieContainer.empty();
 
     data.forEach(movie => {
+
         const {title, poster_path, release_date, vote_average, original_language, popularity} = movie;
 
         const card =$(`
@@ -60,6 +71,8 @@ function showMovieData(data){
                         </div>
                     </div>
                 </div>`);
-    })
+
+                movieContainer.append(card);
+    });
 
 }
