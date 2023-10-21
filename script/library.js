@@ -2,65 +2,60 @@
 
 // tmdb global variables 
 const API_KEY = '?api_key=' + '94b6a2d34c3b54e7f76a308cedd0b6b3';
-const BASE_URL = 'https://api.themoviedb.org/3/movie/';
-const IMAGE_URL = 'https://image.tmdb.org/t/p/w500/'; 
+const BASE_URL = 'https://api.themoviedb.org/3/movie/popular/';
+const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
+
+const API_URL = BASE_URL + API_KEY;
+
+const movieContainer = document.getElementById('movies');
+
+
+getMovieData(API_URL);
 
 $(document).ready(function () {
 
-    getMovieData('top_rated');
+    
 
 });
 
-function returnSelectOption() {
-    var testVal = document.getElementsByName('btnCheck');
-    let chosen;
-    for (i = 0; i < testVal.length; i++) {
+// $("input[name='btnradio']").click(function () {
 
-        if (testVal[i].checked){
+//     const selectOption = $(this).attr('value');
 
-            chosen = testVal[i];
-            console.log(chosen);
-        }
-            
-    }
+//     getMovieData(selectOption);
 
-    return chosen;
-}
+// });
 
+function getMovieData(url) {
 
-function getMovieData() {
-
-    selectOption = returnSelectOption();
-
-    const apiUrl = `${BASE_URL}/${selectOption}/${API_KEY}`;
-
-    
-    fetch(apiUrl).then(res => res.json()).then(data => {
+    fetch(url).then(res => res.json()).then(data => {
         console.log(data.results)
         showMovieData(data.results);
     })
 }
 
-function showMovieData(data){
+function showMovieData(data) {
 
-     
-    const movieContainer = $('#library-mov-container');
-    movieContainer.empty();
+    movieContainer.innerHTML = '';
 
     data.forEach(movie => {
 
-        const {title, poster_path, release_date, vote_average, original_language, popularity} = movie;
+        const { title, poster_path, release_date, vote_average, original_language, popularity } = movie;
 
-        const card =$(`
-        <div class="col col-12 col-lg-3 col-md-4 d-flex align-items-stretch py-4 movie-cards">
+        const movieDataElement = document.createElement('div');
+
+        movieDataElement.classList.add('col', 'col-12', 'col-lg-3', 'col-md-4', 'd-flex', 'align-items-stretch', 'py-4', 'movie-cards');
+
+        movieDataElement.innerHTML = `
                     <div class="card rounded-4" style="width: 18rem;">
-                        <img src="${IMAGE_URL+poster_path}">
-                            <h4 class="lblMovName py-3" id="title">${title}</h4>
-                            <h5 class="lblMeta" id="year">${release_date}</h5>
-                            <h5 class="lblMeta" id="language">original language -${original_language}</h5>
-                            <p class="card-text" id="popularity">Popularity - ${popularity}</p>
-                            <h6 class="imd-score" id="rating"> IMBD - ${vote_average} </h6>
-
+                        <img src="${IMAGE_URL + poster_path}" class="rounded-4 mov-movie-poster">
+                            <div class="card-content">
+                                <h4 class="lblMovName py-3" id="title">${title}</h4>
+                                <h5 class="lblMeta" id="year">${release_date}</h5>
+                                <h5 class="lblMeta" id="language">original language -${original_language}</h5>
+                                <p class="card-text" id="popularity">Popularity - ${popularity}</p>
+                                <h6 class="imd-score" id="rating"> IMBD - ${vote_average} </h6>
+                            </div>
                             <!-- icons -->
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
                                 <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
@@ -69,10 +64,10 @@ function showMovieData(data){
                                         src="../assets/icons/eye.svg" width="25px" height="25px" id="watch"></button>
                             </div>
                         </div>
-                    </div>
-                </div>`);
+                    </div>`;
 
-                movieContainer.append(card);
+            movieContainer.append(movieDataElement);
+
     });
 
 }

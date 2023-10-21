@@ -72,6 +72,10 @@ ul{
         align-items: center;
     }
 
+    .icons-cont{
+        margin-left: 5%;
+    }
+
 }
 
 @media (min-width: 1200px) {
@@ -120,6 +124,14 @@ ul{
     --bs-card-bg: #38423B;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.mov-movie-poster{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+.card-content{
+    padding-left: 10%;
 }
 
 .lblMeta{
@@ -185,8 +197,8 @@ ul{
 }
 
 .icons-cont{
+    align-items: end;
     margin-top: 15%;
-    
     bottom: 0;
     right: 0;
     margin-bottom: 20px;
