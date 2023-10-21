@@ -1,190 +1,99 @@
-
-
-.side-back{
-    
-    width: 200px;
-    height: 1000px;
-}
-
-.back-video{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background: #721E1E;
-}
-
-@media(min-aspect-ratio:16/9){
-    .back-video{
-        width: 1920px;
-        height: 100%;
-    }
-}
-
-
-.nav-link{
-    font-family: 'Italiana', serif;
-    color: wheat;
-    font-size: 20px;
-}
-
-.nav-link:hover {
-  color: #0b1612;
-}
-
-.nav-link.active {
-  border-bottom: 2px solid whitesmoke;
-  color: white;
-}
-
-.toggle{
-    margin-top: -100px;
-    padding-left: 50px;
-}
-
-
-
-.toggle ul{
-    list-style: none;
-    width: 276px;
-    height: 60px;
-    flex-shrink: 0;
-    border-radius: 60px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(45px);
-    margin-left: 30px;
-}
-
-.toggle li{
-    float: left;
-    margin-top: 13px;
-    background-color: #721e1e;
-    margin-top: -1px;
-    margin-left: -50px;
-}
-
-.up{
-    font-family: 'Roboto', sans-seri;
-    
-    color: red;
-}
-
-.up h1{
-    
-    color: purple;
-}
-
-.form{
-    margin-left: 200px;
-    margin-top: 80px;
-    color: #ddc192;
-}
-
-.form h3{
-    padding-left: 30px;
-    color: white;
-}
-
-.form-input{
-    width: 280px;
-    height: 60px;
-    flex-shrink: 0;
-    border-radius: 70px;
-    border: 2px solid #ddc192;
-    background: rgba(30, 30, 30, 0.00);
-    color: #ddc192;
-    
-}
-
-.choose{
-    width: 280px;
-    height: 60px;
-    flex-shrink: 0;
-    border-radius: 70px;
-    border: 2px solid #ddc192;
-    background: rgba(30, 30, 30, 0.00);
-    
-}
-
-.Username{
-    margin-left: 340px;
-    margin-top: -100px;
-    color: #ddc192;
-}
-
-.password{
-    margin-left: 340px;
-    margin-top: 30px;
-    color: #ddc192;
-
-}
-
-.Confirm{
-    margin-left: 670px;
-    margin-top: -155px;
-    color: #ddc192;
-
-}
-
-.choose{
-    margin-left: 668px;
-    margin-top: 34px;
-    color: #ddc192;
-
-}
-
-.sign{
-    font-family: 'Roboto', sans-seri;
-    margin-left: 20px;
-    width: 163px;
-    height: 60px;
-   margin-top: 30px;
-    border-radius: 60px;
-}
-
-.sign h4{
-    margin-top: 15px;
-    margin-left: 40px;
-}
-
-
-
-.sign2 h4{
-    margin-left: 70px;
-    margin-top: 20px;
-}
-
-.sign-link{
-    color: #c07241;
-    text-decoration: none;
-    background-color: black;
-}
-
-.sign-link2{
-    color: #c07241;
-    text-decoration: none;
-    background-color: black;
-    margin-left: 200px;
-}
-
-.sign3 h4{
-    margin-top: -70px;
-    margin-left: 135px;
-
-}
-
-
-
-.button{
-    width: 60px;
-    height: 30px;
-    margin-top: 40px;
-    margin-left: 750px;
-}
-
-.btn{
-    background-color: #ddc192;
-    font-family: 'Roboto', sans-seri;
-    
-}
-
+body {
+    background-color: #FFF1D6;
+ }
+ 
+ nav{
+     background-color: #566246;
+     color:  #FFF1D6;
+ }
+ 
+ .nav-link{
+     color:  #FFF1D6;
+ }
+ 
+ .nav-link:hover{
+     color:#C17240;
+ 
+ }
+ 
+ .nav{
+     font-family: 'M PLUS Rounded 1c', sans-serif;
+     text-decoration: none;
+     color:  #FFF1D6;
+ 
+ }
+ 
+ .container h1{
+     font-family: 'Coustard', serif;
+     font-size: 50px;
+     font-weight: bold;
+     color: white;
+ }
+ 
+ .name{
+     font-family: 'Coustard', serif;
+     font-size: 45px;
+     font-weight: bolder;
+     color:  #FFF1D6;
+ }
+ 
+ .card{
+     background-color: transparent;
+ }
+ 
+ #form {
+     width: 300px;
+     margin-top: -40px;
+     padding: 20px;
+     margin-left: 100px;
+     border-radius: 4px;
+     font-size: 12px;
+ }
+ 
+ #form h1 {
+     color: #0f2027;
+     text-align: center;
+ }
+ 
+ #form button {
+     padding: 10px;
+     margin-top: 10px;
+     width: 100%;
+     color: white;
+     background-color: #566246;
+     border: none;
+     border-radius: 4px;
+ }
+ 
+ .input-control {
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .input-control input {
+     border: 2px solid rgb(255, 255, 255);
+     border-radius: 50px;
+     display: block;
+     font-size: 12px;
+     padding: 10px;
+     width: 100%;
+     background-color:#C17240;
+ }
+ 
+ .input-control input:focus {
+     outline: 0;
+ }
+ 
+ .input-control.success input {
+     border-color: #09c372;
+ }
+ 
+ .input-control.error input {
+     border-color: #ff3860;
+ }
+ 
+ .input-control .error {
+     color: #ff3860;
+     font-size: 9px;
+     height: 13px;
+ }
