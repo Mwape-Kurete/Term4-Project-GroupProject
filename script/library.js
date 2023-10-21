@@ -11,11 +11,11 @@ $(document).ready(function () {
 
 });
 
-$("input[name='btnradio']").click(function() {
+$("input[name='btnCheck']").click(function() {
 
     const selectOption = $(this).attr('value'); 
 
-    getCocktailDataByFirstLetter(selectOption);
+    getMovieData(selectOption);
 
 });
 
