@@ -5,16 +5,23 @@ body{
 }
 
 .navbar-custom{
-    background-color: #721E1E;
+    background-color: #566246;
 }
 
-h1{
-    font-family: 'Coustard', serif;
-    font-weight: 600;
-    color: #29485D;
+.nav-link-custom{
+    font-family: 'M Plus Rounded 1c,sans serif';
+    text-decoration: none;
+    color: #c17817;
+}
+
+.nav-link-custom:hover{
+    color: #c17817;
+    font-family: 'M Plus Rounded 1c,sans serif';
 }
 
 h1 {
+    font-family: 'Coustard', serif;
+    font-weight: 600;
     text-align: left; 
     margin-top: 20px; 
     margin-bottom: 20px; 
@@ -26,20 +33,20 @@ h5{
 }
 
 .webName{
-    color: #DDC192;
+    color: #c17817;
     font-family: 'Coustard', serif;
     text-align: center;
 }
 
 .card{
-    --bs-card-bg: #29485D;
+    --bs-card-bg: #566246;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.15) 3.4px 3.4px 3.4px; 
     height: 150px;
 }
 
 .card-footer {
-    background-color: #29485D; 
+    background-color: #566246; 
     color: white; 
     padding: 10px; 
     text-align: left;
@@ -47,7 +54,7 @@ h5{
 
 .card-body h6, p{
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    color: beige;
+    color: #c17817;
 }
 
 .text-body-tertiary {
@@ -80,7 +87,7 @@ h5{
 }
 
 footer {
-    background-color: #721E1E; 
+    background-color: #566246; 
     color: #fff; 
     padding: 40px 0; 
 }
