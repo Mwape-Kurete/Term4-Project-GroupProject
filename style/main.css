@@ -8,7 +8,7 @@ body{
 }
 
 .webName{
-    color: #FFF1D6;
+    color: #FFF1D6 !important;
     font-family: 'Coustard', serif;
     text-align: center;
 }
@@ -101,12 +101,20 @@ ul{
     padding-left: 0;
 }
 
-.pgHeading{
-    font-family: 'Poppins', sans-serif;
-    color: #650D1B;
-    padding-top: 8px;
-    margin-left: 0;
-    margin-top: 40px;
+#library-H1{
+    font-family: 'Poppins', sans-serif !important;
+    color: #650D1B !important;
+    padding-top: 8px !important;
+    margin-left: 0 !important; 
+    margin-top: 40px !important;
+}
+
+#watchlist-H1{
+    font-family: 'Poppins', sans-serif !important;
+    color: #650D1B !important;
+    padding-top: 8px !important;
+    margin-left: 0 !important;
+    margin-top: 40px !important;
 }
 
 .nav-link.disabled, .nav-link:disabled{
@@ -128,6 +136,7 @@ ul{
 
 .mov-movie-poster{
     box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    width: 100%;
 }
 
 .card-content{
@@ -197,16 +206,29 @@ ul{
 }
 
 .icons-cont{
-    align-items: end;
+    margin-bottom: 20px;
+    margin-right: 20px;
     margin-top: 15%;
     bottom: 0;
     right: 0;
-    margin-bottom: 20px;
-    margin-right: 20px;
+    position: absolute;
 }
 
 .rating{
     margin-bottom: 150px;
+}
+
+.imd-score{
+    margin-bottom: 45%;
+}
+
+a .page-link{
+    background-color: #650D1B;
+    color: #DDC192;
+}
+
+.selected{
+    background-color: #650D1B;
 }
 
 /* 

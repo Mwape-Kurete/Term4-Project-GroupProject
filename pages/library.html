@@ -34,7 +34,7 @@
         <div class="container-fluid">
 
             <a class="navbar-brand" href="../index.html">
-                <img src="" alt="logo" width="30" height="24">
+                <img src="../assets/logo/cs_logo_design.svg" alt="logo" width="45" height="36">
             </a>
 
             <div class="logoTxt">
@@ -74,7 +74,7 @@
             <!-- Page Header Start -->
             <div class="row justify-content-lg-start heading-watch-row py-4">
                 <div class="col-12 heading-watch-col">
-                    <h1 class="pgHeading">Our Movie Library</h1>
+                    <h1 id="library-H1">Our Movie Library</h1>
                 </div>
             </div>
             <!-- Page Header End -->
@@ -82,38 +82,50 @@
             <!-- -------------------------------------------- -->
 
             <!-- Filters section START -->
-
-            <!-- RADIO BUTTONS START -->
-            <div class="btn-group tn-group-sm py-4 radioBTN" role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check check_button" name="btnradio" id="top_rated" value="top_rated"
-                    autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="top_rated">Top Rated</label>
-
-                <input type="radio" class="btn-check check_button" name="btnradio" id="now_playing" value="now_playing"
-                    autocomplete="off">
-                <label class="btn btn-outline-primary" for="now_playing">Now Playing</label>
-
-                <input type="radio" class="btn-check check_button" name="btnradio" id="upcoming" value="upcoming"
-                    autocomplete="off">
-                <label class="btn btn-outline-primary" for="upcoming">Upcoming Movies</label>
+            <div class="row row-cols-4 py-4 radioBTN">
+                <div class="col col-12 col-lg-3 col-md-4 d-flex tag-col overflow-auto" id="tags">
+                    <div class="btn btn-secondary btn-sm rounded-4 m-1 tag">Action</div>
+                    <div type="button" class="btn btn-secondary btn-sm rounded-4 m-1 tag">Adventure</div>
+                    <div type="button" class="btn btn-secondary btn-sm tag rounded-4 m-1">Drama</div>
+                    <div type="button" class="btn btn-secondary btn-sm tag rounded-4 m-1">Comedy</div>
+                </div>
+                
             </div>
-            <!-- RADIO BUTTONS END -->
+            <!-- Filters section START -->
+
+
+            <!-- toolbar BUTTONS START -->
+            <!-- <div class="btn-toolbar justify-content-between radioBTN" role="toolbar" id="tags"
+                aria-label="Toolbar with button groups">
+                <div class="btn-group" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-outline-secondary tags">1</button>
+                    <button type="button" class="btn btn-outline-secondary tags">2</button>
+                    <button type="button" class="btn btn-outline-secondary tags">3</button>
+                    <button type="button" class="btn btn-outline-secondary tags">4</button>
+                </div>
+            </div> -->
+            <!-- toolbar BUTTONS END -->
 
 
 
-            <!-- Filters section END -->
+
 
             <!-- --------------------------------------- -->
 
             <!-- START OF LIBRARY -->
-            
-                <div class="row row-cols-4 py-4 library-mov-container" id="movies">
-                        <!-- Movie library cards go here -->
-                </div>
-            
+
+            <div class="row row-cols-4 py-4 library-mov-container" id="movies">
+                <!-- Movie library cards go here -->
+            </div>
+
             <!-- END OF LIBRARY -->
+
+            <!-- More Movies start -->
+            <!-- <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary load-more" type="button">Load More Movies</button>
+            </div> -->
+            <!-- More Movies end -->
         </div>
-        <!-- End of Library Section -->
     </section>
 
     <!-- END OF BODY CONTENT - -->
