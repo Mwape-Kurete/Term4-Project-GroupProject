@@ -1,0 +1,29 @@
+body {
+    background-color: #FFF1D6;
+ }
+ 
+ nav{
+     background-color: #566246;
+     color:  #FFF1D6;
+ }
+ 
+ .nav-link{
+     color:  #FFF1D6;
+ }
+
+.nav-link.active{
+    color:#C17240;
+    
+}
+ 
+ .nav-link:hover{
+     color:#C17240;
+ 
+ }
+ 
+ .nav{
+     font-family: 'M PLUS Rounded 1c', sans-serif;
+     text-decoration: none;
+     color:  #FFF1D6;
+ 
+ }
