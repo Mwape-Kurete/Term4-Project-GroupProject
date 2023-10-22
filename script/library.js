@@ -7,6 +7,10 @@ const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
 const API_URL = BASE_URL + API_KEY;
 
+const GEN_URL= 'https://api.themoviedb.org/3/movie/';
+
+const API_GEN = GEN_URL + API_KEY;
+
 const movieContainer = document.getElementById('movies');
 const tagsElement = document.getElementById('tags');
 
@@ -180,8 +184,15 @@ function showSelection(){
 function getMovieData(url) {
 
     fetch(url).then(res => res.json()).then(data => {
-        console.log(data.results)
-        showMovieData(data.results);
+        console.log(data.results);
+
+		if(data.results.length != 0){
+			showMovieData(data.results);
+		} else {
+			movieContainer.innerHTML = `<h1>404 ERROR: No Results found</h1>`
+		}
+
+        
     })
 }
 
@@ -200,7 +211,7 @@ function showMovieData(data) {
 
         movieDataElement.innerHTML = `
                     <div class="card rounded-4" style="width: 18rem;">
-                        <img src="${IMAGE_URL + poster_path}" class="rounded-4 mov-movie-poster">
+                        <img src="${poster_path? IMAGE_URL + poster_path: "../assets/images/download (7).jpeg"}" class="rounded-4 mov-movie-poster">
                             <div class="card-content">
                                 <h4 class="lblMovName py-3" id="title">${title}</h4>
                                 <h5 class="lblMeta" id="year">${release_date}</h5>
@@ -227,15 +238,58 @@ function showMovieData(data) {
 
 }
 
+// ADDING Bookmark Movies to an array
+// storeBookmarked();
 
-// LOADING ARRAY DYNAMICALLY 
-// document.querySelector("[btnBookmark]").addEventListener('click', function () {
+// function storeBookmarked(){
 
-//     watchlistMovies.push(movieDataElement); 
+// 	const mark = document.getElementById('bookmark'); 
 
-//     console.log(watchlistMovies);
-// })
+// 	const meta = getMovieData(URL);
+
+// 	meta.forEach(movie => {
+// 		mark.addEventListener('click', () => {
+//             if(arrWatchlistMovies.length === 0 ){
+
+//                 arrWatchlistMovies.push(movie.id);
+//             } else {
+
+//                 if(arrWatchlistMovies.includes(movie.id)){
+//                     arrWatchlistMovies.forEach((id, idx) => {
+//                         if(id === genre.id){
+//                             arrWatchlistMovies.splice(idx, 1);
+//                         }
+//                     })
+//                 } else {
+
+//                     arrWatchlistMovies.push(movie.id);
+//                 }
+//             }
+//             console.log(arrWatchlistMovies);
+            
+//             getMovieData(API_URL + '&' + movie.id + encodeURI(arrWatchlistMovies.join(',')));
+            
 
 
+//          });
+// 	});
+// }
 
+// function displayBookmarked(){
+// 	const marked = document.querySelectorAll('#bookmark');
 
+//     marked.forEach(tag => {
+//         marked.classList.remove('selected');
+//     });
+
+//     if(arrWatchlistMovies != 0){
+
+//         arrWatchlistMovies.forEach(id => {
+
+//             const selectedMovie = document.getElementById(id);
+
+//             selectedMovie.classList.add('selected');
+
+//         })
+//     }
+// }
