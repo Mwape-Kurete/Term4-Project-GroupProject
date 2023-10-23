@@ -82,6 +82,11 @@ ul{
     h1{
         font-size: 52px;
     }
+
+    .nav-logo-cs{
+        width: 60px;
+        height: 48px;
+    }
 }
 
 
