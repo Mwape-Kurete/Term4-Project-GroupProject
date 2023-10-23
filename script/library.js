@@ -113,15 +113,6 @@ $(document).ready(function () {
 
  
 
-
-// $("input[name='btnradio']").click(function () {
-
-//     const selectOption = $(this).attr('value');
-
-//     getMovieData(selectOption);
-
-// });
-
  //calling immediatly
  setGenre();
 
@@ -203,11 +194,15 @@ function getGeneralMovieData(urlG) {
 // ADDING Bookmark Movies to an array
 storeBookmarked();
 
-function storeBookmarked(data_gen){
+function storeBookmarked(url){
 
 	const mark = document.getElementById('bookmark'); 
 
-	data_gen.forEach(movie => {
+
+
+	url.forEach(movie => {
+
+        const {id} = mov_id;
 
 		mark.addEventListener('click', () => {
             if(arrWatchlistMovies.length === 0 ){
