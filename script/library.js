@@ -234,6 +234,8 @@ function storeBookmarked(data_gen){
 
          });
 	});
+
+    let arrMovieData
 }
 
 function displayBookmarked(){
