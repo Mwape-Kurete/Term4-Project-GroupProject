@@ -7,9 +7,11 @@ const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
 const API_URL = BASE_URL + API_KEY;
 
-const GEN_URL= 'https://api.themoviedb.org/3/movie/';
+const GEN_URL= 'https://api.themoviedb.org/3/discover/movie/';
 
-const API_GEN = GEN_URL + API_KEY;
+let mov_id; 
+
+const API_GEN = GEN_URL+ mov_id + API_KEY;
 
 const movieContainer = document.getElementById('movies');
 const tagsElement = document.getElementById('tags');
@@ -100,6 +102,8 @@ const arrGenreSelector = [];
 
 getMovieData(API_URL);
 
+getGeneralMovieData(API_GEN);
+
 // Global Vars end 
 $(document).ready(function () {
 
@@ -181,6 +185,76 @@ function showSelection(){
 }
 
 
+function getGeneralMovieData(urlG) {
+
+    fetch(urlG).then(res => res.json()).then(data_gen => {
+        console.log(data_gen.results);
+
+		if(data_gen.results.length != 0){
+			storeBookmarked(data_gen.results);
+		} else {
+			alert('Data Not Found');
+		}
+
+        
+    })
+}
+
+// ADDING Bookmark Movies to an array
+storeBookmarked();
+
+function storeBookmarked(data_gen){
+
+	const mark = document.getElementById('bookmark'); 
+
+	data_gen.forEach(movie => {
+
+		mark.addEventListener('click', () => {
+            if(arrWatchlistMovies.length === 0 ){
+
+                arrWatchlistMovies.push(movie.id);
+            } else {
+
+                if(arrWatchlistMovies.includes(movie.id)){
+                    arrWatchlistMovies.forEach((id, idx) => {
+                        if(id === genre.id){
+                            arrWatchlistMovies.splice(idx, 1);
+                        }
+                    })
+                } else {
+
+                    arrWatchlistMovies.push(movie.id);
+                }
+            }
+            console.log(arrWatchlistMovies);
+            
+            getMovieData(BASE_URL + '/' + movie.id +'/' + API_KEY + encodeURI(arrWatchlistMovies.join(',')));
+            
+
+
+         });
+	});
+}
+
+function displayBookmarked(){
+	const marked = document.querySelectorAll('#bookmark');
+
+    marked.forEach(marked => {
+        marked.classList.remove('selected');
+    });
+
+    if(arrWatchlistMovies != 0){
+
+        arrWatchlistMovies.forEach(id => {
+
+            const selectedMovie = document.getElementById(id);
+
+            selectedMovie.classList.add('selected');
+
+        })
+    }
+}
+
 function getMovieData(url) {
 
     fetch(url).then(res => res.json()).then(data => {
@@ -238,58 +312,5 @@ function showMovieData(data) {
 
 }
 
-// ADDING Bookmark Movies to an array
-// storeBookmarked();
-
-// function storeBookmarked(){
-
-// 	const mark = document.getElementById('bookmark'); 
-
-// 	const meta = getMovieData(URL);
-
-// 	meta.forEach(movie => {
-// 		mark.addEventListener('click', () => {
-//             if(arrWatchlistMovies.length === 0 ){
-
-//                 arrWatchlistMovies.push(movie.id);
-//             } else {
-
-//                 if(arrWatchlistMovies.includes(movie.id)){
-//                     arrWatchlistMovies.forEach((id, idx) => {
-//                         if(id === genre.id){
-//                             arrWatchlistMovies.splice(idx, 1);
-//                         }
-//                     })
-//                 } else {
-
-//                     arrWatchlistMovies.push(movie.id);
-//                 }
-//             }
-//             console.log(arrWatchlistMovies);
-            
-//             getMovieData(API_URL + '&' + movie.id + encodeURI(arrWatchlistMovies.join(',')));
-            
 
 
-//          });
-// 	});
-// }
-
-// function displayBookmarked(){
-// 	const marked = document.querySelectorAll('#bookmark');
-
-//     marked.forEach(tag => {
-//         marked.classList.remove('selected');
-//     });
-
-//     if(arrWatchlistMovies != 0){
-
-//         arrWatchlistMovies.forEach(id => {
-
-//             const selectedMovie = document.getElementById(id);
-
-//             selectedMovie.classList.add('selected');
-
-//         })
-//     }
-// }
