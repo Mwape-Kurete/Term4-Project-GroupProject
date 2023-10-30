@@ -17,63 +17,67 @@ window.addEventListener('scroll', function() {
 
 // IMPLEMENTING tmdB movie api 
 
-const API_KEY = '?api_key=' + '94b6a2d34c3b54e7f76a308cedd0b6b3';
-const BASE_URL = 'https://api.themoviedb.org/3/movie/popular/';
-const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
+$(document).ready(function() {}) 
+    const API_KEY = '?api_key=c1a816ca66c3ef114eee6648c734672e';
+    const BASE_URL = 'https://api.themoviedb.org/3/movie/popular/';
+    const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
-$(document).ready(function(){
-    getMoviesByFirstLetter('a');
-});
-
-$("input[name='letterFilter']").click(function(){
-    const selectedLetter = $(this).attr('value');
-    getMoviesByFirstLetter(selectedLetter);
-});
-
-function getMoviesByFirstLetter(letter) {
-    const apiURL = 'https://api.themoviedb.org/3/movie/popular/';
-    
-
-    $.ajax({
-        url: apiURL,
-        method: 'GET',
-        dataType: 'json',
-        success: function(data) {
-            const movies = data.results.map(movie => ({
-                id: movie.id,
-                name: movie.title,
-                image: movie.poster,
-            }));
-
-            displayMovies(movies);
-        },
+    $(document).ready(function() {
+        // TMDb API key
+        const API_KEY = '?api_key=c1a816ca66c3ef114eee6648c734672e';
         
-    });
-}
+        // The base URL for TMDb API
+        const BASE_URL = 'https://api.themoviedb.org/3/';
+      
+        // The URL for fetching popular movies
+        const POPULAR_MOVIES_URL = `${BASE_URL}movie/popular${API_KEY}`;
+      
+        // The base URL for movie images
+        const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
+      
+        // Function to fetch popular movies and display them
+        function fetchAndDisplayPopularMovies() {
+          fetch(POPULAR_MOVIES_URL)
+            .then(response => response.json())
+            .then(data => {
+              // Check if the data contains movies
+              if (data.results && data.results.length > 0) {
+                const moviesContainer = document.getElementById("movies-container");
+      
+                // Loop through the movie results and create HTML elements for each movie
+                data.results.forEach(movie => {
+                  // Create a div element for each movie
+                  const movieDiv = document.createElement("div");
+                  movieDiv.className = "movie-item"; // You can define your CSS class for movie items
+      
+                  // Create HTML content for the movie (title, poster, etc.)
+                  movieDiv.innerHTML = `
+                    <h2>${movie.title}</h2>
+                    <img src="${IMAGE_URL}${movie.poster_path}" alt="${movie.title} Poster">
+                    <p>${movie.overview}</p>
+                  `;
+      
+                  // Add a button to add this movie to the watchlist
+                  const addToWatchlistButton = document.createElement("button");
+                  addToWatchlistButton.textContent = "Add to Watchlist";
+                  addToWatchlistButton.addEventListener("click", () => {
+                    addToWatchlist(movie);
+                  });
+                  movieDiv.appendChild(addToWatchlistButton);
+      
+                  // Append the movie item to the movies container
+                  moviesContainer.appendChild(movieDiv);
+                });
+              }
+            })
+            .catch(error => {
+              // Handle any errors that occur during the fetch
+              console.error("Error fetching movie data: ", error);
+            });
+        }
+      
+        // Call the function to fetch and display popular movies
+        fetchAndDisplayPopularMovies();
+      });
 
-function displayMovies(movies) {
-    const moviesContainer = $('#moviesContainer'); 
-    moviesContainer.empty();
-
-    movies.forEach(movie => {
-        const card = $(`
-        <div class="row watchlist-mov py-5">
-        <div class="col-3 d-flex align-items-stretch">
-            <div class="card rounded-4" style="width: 18rem;">
-                <img src="assets/images/movie card 9.png" class="card-img-top" alt="The Expendables 4">
-                <div class="card-body d-flex flex-column">
-                    <h4>The Expendables 4</h4>
-                    <h6>2023 - 1h 43min -Action/Adventure</h6>
-                    <p class="card-text">Director: Scott Waugh</p>
-                    <p class="text-body-tertiary rating">Rating - 4.9/10</p>
-                </div>
-            </div>
-        </div>`);
-
-        card.click(function() {
-            window.location.href = `movie.html?id=${movie.id}`;
-        });
-
-        moviesContainer.append(card);
-    });
-}
+ 
