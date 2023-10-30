@@ -56,7 +56,7 @@ $(document).ready(function() {})
                     <img src="${IMAGE_URL}${movie.poster_path}" alt="${movie.title} Poster">
                     <p>${movie.overview}</p>
                   `;
-      
+    
                   // Add a button to add this movie to the watchlist
                   const addToWatchlistButton = document.createElement("button");
                   addToWatchlistButton.textContent = "Add to Watchlist";
