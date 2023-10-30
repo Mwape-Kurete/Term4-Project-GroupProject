@@ -7,11 +7,11 @@ const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
 const API_URL = BASE_URL + API_KEY;
 
-const GEN_URL= 'https://api.themoviedb.org/3/discover/movie/';
+//const GEN_URL= 'https://api.themoviedb.org/3/discover/movie/';
 
-let mov_id; 
+//let mov_id; 
 
-const API_GEN = GEN_URL+ mov_id + API_KEY;
+//const API_GEN = GEN_URL + API_KEY;
 
 const movieContainer = document.getElementById('movies');
 const tagsElement = document.getElementById('tags');
@@ -102,7 +102,7 @@ const arrGenreSelector = [];
 
 getMovieData(API_URL);
 
-getGeneralMovieData(API_GEN);
+//getGeneralMovieData(API_GEN);
 
 // Global Vars end 
 $(document).ready(function () {
@@ -176,81 +176,81 @@ function showSelection(){
 }
 
 
-function getGeneralMovieData(urlG) {
+// function getGeneralMovieData(urlG) {
 
-    fetch(urlG).then(res => res.json()).then(data_gen => {
-        console.log(data_gen.results);
+//     fetch(urlG).then(res => res.json()).then(data => {
+//         console.log(data_gen.results);
 
-		if(data_gen.results.length != 0){
-			storeBookmarked(data_gen.results);
-		} else {
-			alert('Data Not Found');
-		}
+// 		if(data.results.length != 0){
+// 			storeBookmarked(data.results);
+// 		} else {
+// 			alert('Data Not Found');
+// 		}
 
         
-    })
-}
+//     })
+// }
 
-// ADDING Bookmark Movies to an array
-storeBookmarked();
+// // ADDING Bookmark Movies to an array
+// storeBookmarked();
 
-function storeBookmarked(url){
+// function storeBookmarked(url){
 
-	const mark = document.getElementById('bookmark'); 
-
-
-
-	url.forEach(movie => {
-
-        const {id} = mov_id;
-
-		mark.addEventListener('click', () => {
-            if(arrWatchlistMovies.length === 0 ){
-
-                arrWatchlistMovies.push(movie.id);
-            } else {
-
-                if(arrWatchlistMovies.includes(movie.id)){
-                    arrWatchlistMovies.forEach((id, idx) => {
-                        if(id === genre.id){
-                            arrWatchlistMovies.splice(idx, 1);
-                        }
-                    })
-                } else {
-
-                    arrWatchlistMovies.push(movie.id);
-                }
-            }
-            console.log(arrWatchlistMovies);
-            
-            getMovieData(BASE_URL + '/' + movie.id +'/' + API_KEY + encodeURI(arrWatchlistMovies.join(',')));
-            
+// 	const mark = document.getElementById('bookmark'); 
 
 
-         });
-	});
 
-    let arrMovieData
-}
+// 	url.forEach(movie => {
 
-function displayBookmarked(){
-	const marked = document.querySelectorAll('#bookmark');
+//        // const {id} = mov_id;
 
-    marked.forEach(marked => {
-        marked.classList.remove('selected');
-    });
+// 		mark.addEventListener('click', () => {
+//             if(arrWatchlistMovies.length === 0 ){
 
-    if(arrWatchlistMovies != 0){
+//                 arrWatchlistMovies.push(movie.id);
 
-        arrWatchlistMovies.forEach(id => {
+//             } else {
 
-            const selectedMovie = document.getElementById(id);
+//                 if(arrWatchlistMovies.includes(movie.id)){
+//                     arrWatchlistMovies.forEach((id, idx) => {
+//                         if(id === genre.id){
+//                             arrWatchlistMovies.splice(idx, 1);
+//                         }
+//                     })
+//                 } else {
 
-            selectedMovie.classList.add('selected');
+//                     arrWatchlistMovies.push(movie.id);
+//                 }
+//             }
 
-        })
-    }
-}
+//             console.log(arrWatchlistMovies);
+
+//          });
+// 	});
+
+    
+    
+
+// }
+
+// function displayBookmarked(){
+// 	const marked = document.querySelectorAll('#bookmark');
+
+//     marked.forEach(marked => {
+//         marked.classList.remove('selected');
+//     });
+
+//     if(arrWatchlistMovies != 0){
+
+//         arrWatchlistMovies.forEach(id => {
+
+//             const selectedMovie = document.getElementById(id);
+
+//             selectedMovie.classList.add('selected');
+
+//         })
+//     }
+// }
 
 function getMovieData(url) {
 
@@ -274,7 +274,8 @@ function showMovieData(data) {
 
     data.forEach(movie => {
 
-        const { title, poster_path, release_date, vote_average, original_language, popularity } = movie;
+        const { title, poster_path, release_date, vote_average, original_language, popularity, id} = movie;
+
 
         const movieDataElement = document.createElement('div');
 
@@ -295,7 +296,7 @@ function showMovieData(data) {
                                     <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
                                             src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
                                     <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
-                                            src="../assets/icons/bookmark-check.svg" width="25px" height="25px" id="bookmark"></button>
+                                            src="../assets/icons/bookmark-check.svg" width="25px" height="25px" id="bookmark ${id}"></button>
                                 </div>
                             </div>
                         </div>
