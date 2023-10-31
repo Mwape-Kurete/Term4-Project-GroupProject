@@ -241,7 +241,7 @@ function showMovieData(data) {
 function getMovieId(element) {
 
 	const idVal = element.id;
-	const flag = true; 
+	var flag = true;
 
 	console.log(idVal);
 
@@ -255,6 +255,8 @@ function getMovieId(element) {
 			arrWatchlistMovies.forEach((id, idx) => {
 				if (id === idVal) {
 					arrWatchlistMovies.splice(idx, 1);
+
+					flag = false;
 				}
 			})
 		} else {
@@ -265,19 +267,25 @@ function getMovieId(element) {
 
 	console.log(arrWatchlistMovies);
 
-	dispalyBookmarked(flag);
+	dispalyBookmarkedTrue(flag);
 
 }
 
-function dispalyBookmarked(val){
+function dispalyBookmarkedTrue(val) {
 
-	if(val === true){
-		
-		const markedMovie = document.getElementsByClassName('.btnBookmark');
-		
-		markedMovie.classList.add('selected');
+	const markedMovie = document.getElementsByClassName('.btnBookmark');
 
-	} else {
-		markedMovie.classList.remove('selected');
+	if (val == true) {
+
+
+		$(markedMovie).addClass('btn_selected');
+
+		console.log(val);
+
+	} else if(val == false){
+
+		$(markedMovie).removeClass('btn_selected'); 
+
+		console.log(val);
 	}
 }

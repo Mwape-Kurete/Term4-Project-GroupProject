@@ -236,6 +236,10 @@ a .page-link{
     background-color: #650D1B;
 }
 
+.btn_selected{
+    background-color: #650D1B;
+}
+
 /* 
 font-family: 'Coustard', serif;
 font-family: 'M PLUS Rounded 1c', sans-serif;
