@@ -219,7 +219,7 @@ function showMovieData(data) {
                             
                                 <!-- icons -->
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
-                                    <button class="btn btn-warning me-md-2 btnBookmark" type="button"><img
+                                    <button class="btn btn-warning me-md-2 btnPlay" type="button" id="${id}"><img
                                             src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
                                     <button class="btn btn-warning me-md-2 btnBookmark" type="button" onclick="getMovieId(this)" id="${id}"><img
                                             src="../assets/icons/bookmark-check.svg" width="25px" height="25px" ></button>
@@ -232,7 +232,6 @@ function showMovieData(data) {
 
 	});
 
-	// Load more Functionality
 
 }
 
@@ -267,6 +266,8 @@ function getMovieId(element) {
 
 	console.log(arrWatchlistMovies);
 
+	localStorage.setItem('arrMovies', JSON.stringify(arrWatchlistMovies));
+
 	dispalyBookmarkedTrue(flag);
 
 }
@@ -277,14 +278,16 @@ function dispalyBookmarkedTrue(val) {
 
 	if (val == true) {
 
-
-		$(markedMovie).addClass('btn_selected');
+		$(markedMovie).each(function() {
+			$(this).addClass('active');
+		})
+		
 
 		console.log(val);
 
 	} else if(val == false){
 
-		$(markedMovie).removeClass('btn_selected'); 
+		$(markedMovie).removeClass('active'); 
 
 		console.log(val);
 	}
