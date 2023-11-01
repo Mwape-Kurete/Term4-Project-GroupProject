@@ -10,24 +10,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/home page.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&family=M+PLUS+Rounded+1c:wght@100;300;400;500&family=Poppins:wght@600&display=swap">
+
+    <!--Custom js-->
+    <script src="script/global.js"></script>
+    <script src="script/detail.js"></script>
 </head>
 
 <body>
     <!-- ---------------------------------------------------------------------------------------------------- -->
 
     <!-- START OF NAV SECTION -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-custom">
 
         <div class="container-fluid">
 
             <a class="navbar-brand" href="index.html">
-                <img src="" alt="logo" width="30" height="24">
-            </a>
+                <img src="assets/images/Logo.png" alt="logo" width="175" height="75">
+            </a>            
 
-
-            <h1 class="justify-content-center">CineScape</h1>
-
+            <h1 class="justify-content-center webName">CineScape</h1>
 
             <ul class="nav nav-underline justify-content-end">
                 <li class="nav-item">
@@ -49,9 +52,8 @@
     <!-- END OF NAV SECTION -->
 
     <!-- ---------------------------------------------------------------------------------------------------- -->
-
-    <div class="container">
-        <h1>Most Popular</h1>
+    <h1>Most Popular</h1>
+    <div class="container"> 
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -62,19 +64,19 @@
               <div class="carousel-item active">
                 <img src="assets/images/movie 1.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Fast X</h5>
+                  <h5></h5>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="assets/images/movie 2.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Avatar: The Way Of Water</h5>
+                  <h5></h5>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="assets/images/movie 3.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Batman</h5>
+                  <h5></h5>
                 </div>
               </div>
             </div>
@@ -89,97 +91,243 @@
           </div>
     </div>
 
-    <p><h1>Newly Released</h1></p>
-    <div class="container">
-      <div class="row">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <img src="assets/images/movie 4.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">The Flash</h5>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Directed by Andrès Muschietti</li>
-                  <li class="list-group-item">Rating of 3.6</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="assets/images/movie 5.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Oppenheimer</h5>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Directed by Christopher Nolan</li>
-                  <li class="list-group-item">Rating of 8.5</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="assets/images/movie 6.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Black Adam</h5>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Directed by Jaume Collet-Serra</li>
-                  <li class="list-group-item">Rating of 6.3</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="assets/images/movie 7.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Meg 2: The Trench</h5>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Directed by Ben Wheatley</li>
-                  <li class="list-group-item">Rating of 5.1</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <p><h1>Recommended</h1></p>
 
-    <footer class="text-white py-4">
+    <h1>Newly Released</h1>
+
+    <section class="newly released-content">
       <div class="container">
-          <div class="row">
-              <div class="col-md-4">
-                  <h5>Contact Us</h5>
-                  <address>
-                      123 Main Street<br>
-                      City, Country<br>
-                      Email: contact@example.com<br>
-                      Phone: +1 (123) 456-7890
-                  </address>
+
+          <div class="row justify-content-lg-start heading-row">
+              <div class="col-12 heading-new-col">
               </div>
-              <div class="col-md-4">
-                  <h5>Quick Links</h5>
-                  <ul class="list-unstyled">
-                      <li><a href="pages/watchlist.html">Watchlist</a></li>
-                      <li><a href="#">Movies</a></li>
-                      <li><a href="#">TV Shows</a></li>
-                      <li><a href="#">About Us</a></li>
-                  </ul>
+          </div>
+
+          <div class="row watchlist-mov py-5">
+              <div class="col-3 d-flex align-items-stretch">
+                  <div class="card rounded-4" style="width: 18rem;">
+                      <img src="assets/images/movie card 1.png"
+                          class="card-img-top" alt="The Flash">
+                      <div class="card-body d-flex flex-column">
+                          <h4>The Flash</h4>
+                          <h6>2023 - 2h 26min -Action/Adventure</h6>
+                          <p class="card-text">Director: Andrès Muschietti</p>
+                          <p class="text-body-tertiary rating">Rating - 6.7/10</p>
+                      </div>
+                  </div>
               </div>
-              <div class="col-md-4">
-                  <h5>Follow Us</h5>
-                  <ul class="list-unstyled">
-                      <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-                      <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                      <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                  </ul>
+
+              <div class="col-3 d-flex align-items-stretch">
+                  <div class="card rounded-4" style="width: 18rem;">
+                      <img src="assets/images/movie card 2.png" class="card-img-top" alt="Oppenheimer">
+                      <div class="card-body d-flex flex-column">
+                          <h4>Oppenheimer</h4>
+                          <h6>2017 - 1h 44min - Horror/Thriller</h6>
+                          <p class="card-text">Director: Christopher Nolan</p>
+                          <p class="text-body-tertiary rating">Rating - 8.5/10</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-3 d-flex align-items-stretch">
+                  <div class="card rounded-4" style="width: 18rem;">
+                      <img src="assets/images/movie card 3.png" class="card-img-top" alt="Black Adam">
+                      <div class="card-body d-flex flex-column">
+                          <h4>Black Adam</h4>
+                          <h6>2022 - 2h 05min - Drama/Action</h6>
+                          <p class="card-text">Director: Jaume Collet-Serra</p>
+                          <p class="text-body-tertiary rating">Rating - 6.3/10</p>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-3 d-flex align-items-stretch">
+                  <div class="card rounded-4" style="width: 18rem;">
+                      <img src="assets/images/movie card 4.png" class="card-img-top" alt="Meg 2: The Trench">
+                      <div class="card-body d-flex flex-column">
+                          <h4>Meg 2: The Trench</h4>
+                          <h6>2021 - 2h 06min - Adventure</h6>
+                          <p class="card-text">Director: Ben Wheatley</p>
+                          <p class="text-body-tertiary rating">Rating - 5.1/10</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  </section>
+
+    <div class="container">
+        <div class="row justify-content-lg-start heading-row">
+            <div class="col-12 heading-new-col">
+            </div>
+        </div>
+
+        <div class="row watchlist-mov py-5">
+            <div class="col-3 d-flex align-items-stretch">
+                <div class="card rounded-4" style="width: 18rem;">
+                    <img src="assets/images/movie card 5.png" class="card-img-top" alt="Blue Beetle">
+                    <div class="card-body d-flex flex-column">
+                        <h4>Blue Beetle</h4>
+                        <h6>2023 - 2h 07min -Action/Adventure</h6>
+                        <p class="card-text">Director: Angel Manuel Soto</p>
+                        <p class="text-body-tertiary rating">Rating - 6.1/10</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 d-flex align-items-stretch">
+                <div class="card rounded-4" style="width: 18rem;">
+                    <img src="assets/images/movie card 6.png" class="card-img-top" alt="Aquaman and the Lost Kingdom">
+                    <div class="card-body d-flex flex-column">
+                        <h4>Aquaman and the Lost Kingdom</h4>
+                        <h6>2023 - 2h - Action/Fantasy</h6>
+                        <p class="card-text">Director: James Wan</p>
+                        <p class="text-body-tertiary rating">Rating - 8.5/10</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 d-flex align-items-stretch">
+                <div class="card rounded-4" style="width: 18rem;">
+                    <img src="assets/images/movie card 7.png" class="card-img-top" alt="The Equalizer 3">
+                    <div class="card-body d-flex flex-column">
+                        <h4>The Equalizer 3</h4>
+                        <h6>2023 - 1h 49min - Vigilante/Mystery</h6>
+                        <p class="card-text">Director: Antione Fuqua</p>
+                        <p class="text-body-tertiary rating">Rating - 6.9/10</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 d-flex align-items-stretch">
+                <div class="card rounded-4" style="width: 18rem;">
+                    <img src="assets/images/movie card 8.png" class="card-img-top" alt="Guardians of the Galaxy">
+                    <div class="card-body d-flex flex-column">
+                        <h4>Guardians of the Galaxy</h4>
+                        <h6>2023 - 2h 29min - Sci-Fi/Action</h6>
+                        <p class="card-text">Director: James Gunn</p>
+                        <p class="text-body-tertiary rating">Rating - 7.9/10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+  <h1>Recommended</h1>
+
+  <section class="recommended-content">
+    <div class="container">
+
+        <div class="row justify-content-lg-start heading-row">
+            <div class="col-12 heading-new-col">
+            </div>
+        </div>
+
+        <div class="row watchlist-mov py-5">
+            <div class="col-3 d-flex align-items-stretch">
+                <div class="card rounded-4" style="width: 18rem;">
+                    <img src="assets/images/movie card 9.png" class="card-img-top" alt="The Expendables 4">
+                    <div class="card-body d-flex flex-column">
+                        <h4>The Expendables 4</h4>
+                        <h6>2023 - 1h 43min -Action/Adventure</h6>
+                        <p class="card-text">Director: Scott Waugh</p>
+                        <p class="text-body-tertiary rating">Rating - 4.9/10</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 d-flex align-items-stretch">
+                <div class="card rounded-4" style="width: 18rem;">
+                    <img src="assets/images/movie card 10.png" class="card-img-top" alt="Mission Impossible - Dead Reckoning Part 1">
+                    <div class="card-body d-flex flex-column">
+                        <h4>Mission Impossible - Dead Reckoning Part 1</h4>
+                        <h6>2023 - 2h 43min - Action/Thriller</h6>
+                        <p class="card-text">Director: Christopher McQuarrie</p>
+                        <p class="text-body-tertiary rating">Rating - 7.8/10</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 d-flex align-items-stretch">
+                <div class="card rounded-4" style="width: 18rem;">
+                    <img src="assets/images/movie card 11.png" class="card-img-top" alt="Spider-Man: Across the Spider-Verse">
+                    <div class="card-body d-flex flex-column">
+                        <h4>Spider-Man: Across the Spider-Verse</h4>
+                        <h6>2023 - 2h 20min - Action/Sci-Fi</h6>
+                        <p class="card-text">Director:Justin K. Thompson</p>
+                        <p class="text-body-tertiary rating">Rating - 8.7/10</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3 d-flex align-items-stretch">
+                <div class="card rounded-4" style="width: 18rem;">
+                    <img src="assets/images/movie card 12.png" class="card-img-top" alt="Indiana Jones and the Dial of Destiny">
+                    <div class="card-body d-flex flex-column">
+                        <h4>Indiana Jones and the Dial of Destiny</h4>
+                        <h6>2023 - 2h 22min - Adventure/Action</h6>
+                        <p class="card-text">Director: James Mangold</p>
+                        <p class="text-body-tertiary rating">Rating - 6.7/10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+  <div class="container">
+      <div class="row justify-content-lg-start heading-row">
+          <div class="col-12 heading-new-col">
+          </div>
+      </div>
+
+      <div class="row watchlist-mov py-5">
+          <div class="col-3 d-flex align-items-stretch">
+              <div class="card rounded-4" style="width: 18rem;">
+                  <img src="assets/images/movie card 13.png" class="card-img-top" alt="Transformers: Rise of the Beasts">
+                  <div class="card-body d-flex flex-column">
+                      <h4>Transformers: Rise of the Beasts</h4>
+                      <h6>2023 - 2h 07min - Action/Sci-Fi</h6>
+                      <p class="card-text">Director: Steven Capie Jr.</p>
+                      <p class="text-body-tertiary rating">Rating - 6.1/10</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-3 d-flex align-items-stretch">
+              <div class="card rounded-4" style="width: 18rem;">
+                  <img src="assets/images/movie card 14.png" class="card-img-top" alt="Gran Turismo">
+                  <div class="card-body d-flex flex-column">
+                      <h4>Gran Turismo</h4>
+                      <h6>2023 - 2h 15m - Drama/Sport</h6>
+                      <p class="card-text">Director: Neill Blomkamp</p>
+                      <p class="text-body-tertiary rating">Rating - 7.2/10</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-3 d-flex align-items-stretch">
+              <div class="card rounded-4" style="width: 18rem;">
+                  <img src="assets/images/movie card 15.png" class="card-img-top" alt="The Nun 2">
+                  <div class="card-body d-flex flex-column">
+                      <h4>The Nun 2</h4>
+                      <h6>2023 - 1h 50min - Horror/Mystery</h6>
+                      <p class="card-text">Director: Michael Chaves</p>
+                      <p class="text-body-tertiary rating">Rating - 5.7/10</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-3 d-flex align-items-stretch">
+              <div class="card rounded-4" style="width: 18rem;">
+                  <img src="assets/images/movie card 16.png" class="card-img-top" alt="Nowhere">
+                  <div class="card-body d-flex flex-column">
+                      <h4>Nowhere</h4>
+                      <h6>2023 - 2h 29min - Thriller/Action</h6>
+                      <p class="card-text">Director: Albert Pinto</p>
+                      <p class="text-body-tertiary rating">Rating - 5.7/10</p>
+                  </div>
               </div>
           </div>
       </div>
-  </footer>
-  
+</section>
 
     <!-- ------------------------------------- end of body <js scripts below -------------------------------- -->
     <!-- scripts -->
@@ -194,6 +342,10 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="script/main.js"></script>
+   
 </body>
 
 </html>
+
+
+

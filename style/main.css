@@ -1,13 +1,14 @@
 /* CSS STARTS HERE */
 body{
-    background-color: #DDC192;
+    background-color: #FFF1D6 !important;
 }
+
 .navbar-custom{
-    background-color: #721E1E;
+    background-color: #566246;
 }
 
 .webName{
-    color: #DDC192;
+    color: #FFF1D6 !important;
     font-family: 'Coustard', serif;
     text-align: center;
 }
@@ -25,11 +26,11 @@ body{
 .nav-link-custom{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     text-decoration: none;
-    color: #C07241;
+    color: #C17817;
 }
 
 .nav-link-custom:hover{
-    color: #C07241;
+    color: #650D1B;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
@@ -38,10 +39,63 @@ ul{
 }
 
 .active{
-    color: #C07241;
+    color: #FFF1D6;
 }
+
+/* ---------------------------------------------------------------- */
+/* RESPONSIVENESS */
+
+@media (min-width: 768px) {
+    h1{
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .movie-cards{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading-watch-row{
+        margin-left: 5%;
+    }
+
+    .radioBTN{
+        margin-left: 5%;
+    }
+
+    .checkBTN{
+        margin-left: 5%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons-cont{
+        margin-left: 5%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    h1{
+        font-size: 52px;
+    }
+
+    .nav-logo-cs{
+        width: 60px;
+        height: 48px;
+    }
+}
+
+
 /* ---------------------------------------------------------------- */
 /* MWAPE - WATCHLIST CSS */
+
+.logoTxt{
+    margin-left: 10%;
+}
 
 .heading-watch-row{
     padding-right: 0;
@@ -52,12 +106,20 @@ ul{
     padding-left: 0;
 }
 
-.pgHeading{
-    font-family: 'Poppins', sans-serif;
-    color: #721E1E;
-    padding-top: 8px;
-    margin-left: 0;
-    margin-top: 40px;
+#library-H1{
+    font-family: 'Poppins', sans-serif !important;
+    color: #650D1B !important;
+    padding-top: 8px !important;
+    margin-left: 0 !important; 
+    margin-top: 40px !important;
+}
+
+#watchlist-H1{
+    font-family: 'Poppins', sans-serif !important;
+    color: #650D1B !important;
+    padding-top: 8px !important;
+    margin-left: 0 !important;
+    margin-top: 40px !important;
 }
 
 .nav-link.disabled, .nav-link:disabled{
@@ -72,48 +134,66 @@ ul{
 }
 
 .card{
-    --bs-card-bg: #29485D;
+    --bs-card-bg: #38423B;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
-.card-body h4{
-    font-family: 'Poppins', sans-serif;
-    color: white;
+.mov-movie-poster{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    width: 100%;
 }
 
-.card-body h6, p{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+.card-content{
+    padding-left: 10%;
+}
+
+.lblMeta{
+    font-family: 'Libre Franklin', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 95%;
+    color: #FFF1D6;
+}
+
+.lblMovName{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    color: #C17817;
+}
+
+#director{
     color: beige;
+    font-family: 'Alice', serif;
 }
 
-.text-body-tertiary {
-    --bs-text-opacity: 1;
-    color: #3b0f0f;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+#rating{
+    color: #88530f;
+    font-family: 'Alice', serif;
 }
+
 
 .btnBookmark{
-    background-color: #721E1E;
-    border-color: #DDC192;
+    background-color: #C17817;
+    border-color: #C17817;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .btnBookmark:hover{
-    background-color: #DDC192;
-    border-color: #DDC192;
+    background-color: #FFF1D6;
+    border-color: #FFF1D6;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .btnWatched{
-    background-color: #DDC192;
-    border-color: #721E1E;
+    background-color: #C17817;
+    border-color: #C17817;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .btnWatched:hover{
-    background-color: #721E1E;
-    border-color: #721E1E;
+    background-color: #FFF1D6;
+    border-color: #FFF1D6;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
@@ -124,22 +204,40 @@ ul{
 }
 
 .btn-outline-danger, .btn.disabled, .btn:disabled, fieldset:disabled .btn {
-    background-color: #3b0f0f;
+    background-color: #650D1B;
     color: #DDC192;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
 .icons-cont{
-    position: absolute;
-    bottom: 0;
-    right: 0;
     margin-bottom: 20px;
     margin-right: 20px;
+    margin-top: 15%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
 }
 
 .rating{
     margin-bottom: 150px;
+}
+
+.imd-score{
+    margin-bottom: 45%;
+}
+
+a .page-link{
+    background-color: #650D1B;
+    color: #DDC192;
+}
+
+.selected{
+    background-color: #650D1B;
+}
+
+.btn_selected{
+    background-color: #650D1B;
 }
 
 /* 
@@ -147,8 +245,37 @@ font-family: 'Coustard', serif;
 font-family: 'M PLUS Rounded 1c', sans-serif;
 font-family: 'Poppins', sans-serif;
 
+
+new fonts 
+font-family: 'Alice', serif;
+font-family: 'Coustard', serif;
+font-family: 'Libre Franklin', sans-serif;
+font-family: 'Pridi', serif;
  */
 
 /* END OF MWAPE WATCHLIST CSS */
+
+/* START OF MWAPE LIBBRARY CSS */
+
+.radioBTN{
+    margin-right: 1%;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    background-color: #650D1B;
+    border-color: #650D1B;
+    color: #FFF1D6;
+}
+
+.btn-outline-primary{
+    border-color: #650D1B;
+    color: #650D1B;
+}
+
+.btn-outline-primary:hover{
+    border-color: #C17817;
+    color: #C17817;
+}
+/* END OF MWAPE LIBRARY CSS   */
 
 /* -------------------------------------------------------------------------- */

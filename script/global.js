@@ -36,3 +36,7 @@ const getMovieDetail = function (movieId) {
 
 
 
+const getMovieList = function (urlParam, genreName) {
+  window.localStorage.setItem("urlParam", urlParam);
+  window.localStorage.setItem("genreName", genreName);
+}

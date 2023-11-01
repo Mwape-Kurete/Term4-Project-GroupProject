@@ -1,0 +1,191 @@
+
+
+.side-back{
+    
+    width: 200px;
+    height: 1000px;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: black;
+}
+
+@media(min-aspect-ratio:16/9){
+    .back-video{
+        width: 1920px;
+        height: 100%;
+    }
+}
+
+
+.nav-link{
+    font-family: 'Italiana', serif;
+    color: wheat;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+  color: #0b1612;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid whitesmoke;
+  color: white;
+}
+
+.toggle{
+    margin-top: -100px;
+    padding-left: 50px;
+}
+
+
+
+.toggle ul{
+    list-style: none;
+    width: 276px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(45px);
+    margin-left: 30px;
+}
+
+.toggle li{
+    float: left;
+    margin-top: 13px;
+    background-color: #721e1e;
+    margin-top: -1px;
+    margin-left: -50px;
+}
+
+.up{
+    font-family: 'Roboto', sans-seri;
+    margin-top: 100px;
+    margin-left: 400px;
+    color: #ddc192;
+}
+
+.up h1{
+    font-size: 250px;
+    color: white;
+}
+
+.form{
+    margin-left: 200px;
+    margin-top: 80px;
+    color: #ddc192;
+}
+
+.form h3{
+    padding-left: 30px;
+    color: white;
+}
+
+.form-input{
+    width: 280px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 70px;
+    border: 2px solid #ddc192;
+    background: rgba(30, 30, 30, 0.00);
+    color: #ddc192;
+    
+}
+
+.choose{
+    width: 280px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 70px;
+    border: 2px solid #ddc192;
+    background: rgba(30, 30, 30, 0.00);
+    
+}
+
+.Username{
+    margin-left: 340px;
+    margin-top: -100px;
+    color: #ddc192;
+}
+
+.password{
+    margin-left: 340px;
+    margin-top: 30px;
+    color: #ddc192;
+
+}
+
+.Confirm{
+    margin-left: 670px;
+    margin-top: -155px;
+    color: #ddc192;
+
+}
+
+.choose{
+    margin-left: 668px;
+    margin-top: 34px;
+    color: #ddc192;
+
+}
+
+.sign{
+    font-family: 'Roboto', sans-seri;
+    margin-left: 20px;
+    width: 163px;
+    height: 60px;
+   margin-top: 30px;
+    border-radius: 60px;
+}
+
+.sign h4{
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+
+
+.sign2 h4{
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.sign-link{
+    color: #c07241;
+    text-decoration: none;
+    background-color: black;
+}
+
+.sign-link2{
+    color: #c07241;
+    text-decoration: none;
+    background-color: black;
+    margin-left: 200px;
+}
+
+.sign3 h4{
+    margin-top: -70px;
+    margin-left: 135px;
+
+}
+
+
+
+.button{
+    width: 60px;
+    height: 30px;
+    margin-top: 40px;
+    margin-left: 750px;
+}
+
+.btn{
+    background-color: #ddc192;
+    font-family: 'Roboto', sans-seri;
+    
+}
+
