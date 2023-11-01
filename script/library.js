@@ -11,8 +11,8 @@ const API_URL_ = BASE_URL_ + API_KEY_;
 
 //filter appends
 
-const YEAR_FILT = "&sort_by=primary_release_date.desc"; 
-const VOTE_FILT = "&sort_by=vote_average.desc"
+const YEAR_FILT = "&sort_by=primary_release_date.asc"; 
+const VOTE_FILT = "&sort_by=vote_average.desc";
 
 //const API_GEN = GEN_URL + API_KEY;
 
@@ -120,7 +120,7 @@ function sendFilterApi(select){
 	const filterSelect = select.id; 
 
 	const api_yearFilter = API_URL_ + YEAR_FILT;
-	const api_ratingFilter = API_KEY_ + VOTE_FILT; 
+	const api_ratingFilter = API_URL_ + VOTE_FILT; 
 	const defaultUrl = API_URL_;
 
 	if(filterSelect == "default"){
@@ -130,14 +130,14 @@ function sendFilterApi(select){
 
 		getMovieData(defaultUrl);
 
-	} else if(filterSelect != "default" && filterSelect == "filter_year" ){
+	} else if(filterSelect == "filter_year" ){
 
 		//only if year filter is selected
 		console.log("selected: " + filterSelect);
 
 		getMovieData(api_yearFilter);
 
-	}else if(filterSelect != "default" && filterSelect == "filter_rating"){
+	}else if(filterSelect == "filter_rating"){
 		//only if rating filter selected
 		console.log("selected: " + filterSelect);
 
