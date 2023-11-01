@@ -180,6 +180,8 @@ function showSelection() {
 
 function getMovieData(url) {
 
+	
+
 	fetch(url).then(res => res.json()).then(data => {
 		console.log(data.results);
 
@@ -188,7 +190,6 @@ function getMovieData(url) {
 		} else {
 			movieContainer.innerHTML = `<h1>404 ERROR: No Results found</h1>`
 		}
-
 
 	})
 }
