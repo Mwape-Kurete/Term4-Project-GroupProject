@@ -5,16 +5,24 @@ body{
 }
 
 .navbar-custom{
-    background-color: #721E1E;
+    background-color: #566246;
 }
 
-h1{
-    font-family: 'Coustard', serif;
-    font-weight: 600;
-    color: #29485D;
+.nav-link-custom{
+    font-family: 'M Plus Rounded 1c,sans serif';
+    text-decoration: none;
+    color: #c17817;
+}
+
+.nav-link-custom:hover{
+    color: #c17817;
+    font-family: 'M Plus Rounded 1c,sans serif';
 }
 
 h1 {
+    color: #c17817;
+    font-family: 'Coustard', serif;
+    font-weight: 600;
     text-align: left; 
     margin-top: 20px; 
     margin-bottom: 20px; 
@@ -26,35 +34,61 @@ h5{
 }
 
 .webName{
-    color: #DDC192;
+    color: #c17817;
     font-family: 'Coustard', serif;
     text-align: center;
 }
 
-.card{
-    --bs-card-bg: #29485D;
+.newly-released-content {
+    background-color: #E6F2E9;
+    padding: 30px 0; 
+}
+
+.newly-released-content .card {
     border: none;
     box-shadow: rgba(0, 0, 0, 0.15) 3.4px 3.4px 3.4px; 
-    height: 150px;
-}
-
-.card-footer {
-    background-color: #29485D; 
-    color: white; 
-    padding: 10px; 
-    text-align: left;
-}
-
-.card-body h6, p{
+    background-color: #fff; 
+  }
+  
+.newly-released-content .card-body {
+    text-align: center; 
+  }
+  
+.newly-released-content .card-body h4 {
+    font-family: 'Coustard', serif;
+    font-weight: 600;
+    font-size: 1.25rem; 
+    margin: 0; 
+  }
+  
+.newly-released-content .card-body h6 {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    color: beige;
-}
-
-.text-body-tertiary {
-    --bs-text-opacity: 1;
-    color: #3b0f0f;
+    font-size: 1rem; 
+    margin-top: 5px; 
+    margin-bottom: 10px; 
+  }
+  
+.newly-released-content .card-body p {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-}
+    font-size: 0.875rem;
+    margin: 0; 
+  }
+  
+.newly-released-content .text-body-tertiary {
+    color: #c17817;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 0.875rem; 
+    margin: 0; 
+  }
+  
+.newly-released-content .card-img-top {
+    height: 100%;
+  }
+  
+  
+.newly-released-content .col-3 {
+    margin-bottom: 20px; 
+  }
 
 .carousel-item{
     background-color: #E6F2E9;
@@ -80,7 +114,7 @@ h5{
 }
 
 footer {
-    background-color: #721E1E; 
+    background-color: #566246; 
     color: #fff; 
     padding: 40px 0; 
 }
