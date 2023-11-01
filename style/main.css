@@ -1,4 +1,6 @@
 /* CSS STARTS HERE */
+
+/* GENERAL CSS */
 body{
     background-color: #FFF1D6 !important;
 }
@@ -49,6 +51,51 @@ ul{
     h1{
         font-size: 36px;
     }
+
+    .card-col{
+        max-width: 70rem;
+    }
+
+    .navbar{
+        width: auto;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .movie-cards{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading-watch-row{
+        margin-left: 5%;
+    }
+
+    .radioBTN{
+        margin-left: 5%;
+    }
+
+    .checkBTN{
+        margin-left: 5%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons-cont{
+        margin-left: 5%;
+    }
+
+    .movie-cards{
+        height: 40rem;
+    }
+
+    .card-col{
+        min-width: 50rem;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -76,6 +123,10 @@ ul{
         margin-left: 5%;
     }
 
+    .movie-cards{
+        height: 40rem;
+    }
+
 }
 
 @media (min-width: 1200px) {
@@ -89,7 +140,7 @@ ul{
     }
 }
 
-
+/* RESPONSIVENESS END */
 /* ---------------------------------------------------------------- */
 /* MWAPE - WATCHLIST CSS */
 
@@ -256,6 +307,13 @@ font-family: 'Pridi', serif;
 /* END OF MWAPE WATCHLIST CSS */
 
 /* START OF MWAPE LIBBRARY CSS */
+
+.tag-col{
+    max-width: 10rem;
+}
+
+
+
 
 .radioBTN{
     margin-right: 1%;
