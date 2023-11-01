@@ -124,6 +124,7 @@ function setGenre() {
 	genreTypes.forEach(genre => {
 
 		const tg = document.createElement('div');
+		
 		tg.classList.add('btn', 'btn-secondary', 'btn-sm', 'rounded-4', 'm-1', 'tag',);
 		tg.id = genre.id;
 		tg.innerText = genre.name;
