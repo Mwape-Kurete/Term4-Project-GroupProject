@@ -1,11 +1,11 @@
 // IMPLEMENTENTING tmdB api 
 
 // tmdb global variables 
-const API_KEY = '?api_key=' + '94b6a2d34c3b54e7f76a308cedd0b6b3';
-const BASE_URL = 'https://api.themoviedb.org/3/discover/movie';
-const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
+const API_KEY_ = '?api_key=' + '94b6a2d34c3b54e7f76a308cedd0b6b3';
+const BASE_URL_ = 'https://api.themoviedb.org/3/discover/movie';
+const IMAGE_URL_ = 'https://image.tmdb.org/t/p/w500';
 
-const API_URL = BASE_URL + API_KEY;
+const API_URL_ = BASE_URL_ + API_KEY_;
 
 //const GEN_URL= 'https://api.themoviedb.org/3/discover/movie/';
 
@@ -101,7 +101,7 @@ const genreTypes = [
 const arrGenreSelector = [];
 
 
-getMovieData(API_URL);
+getMovieData(API_URL_);
 
 //getGeneralMovieData(API_GEN);
 
@@ -147,7 +147,7 @@ function setGenre() {
 			}
 			console.log(arrGenreSelector);
 
-			getMovieData(API_URL + '&with_genres=' + encodeURI(arrGenreSelector.join(',')));
+			getMovieData(API_URL_ + '&with_genres=' + encodeURI(arrGenreSelector.join(',')));
 			showSelection()
 
 		});
