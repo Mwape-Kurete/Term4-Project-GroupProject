@@ -5,8 +5,10 @@ import { api_key, imageBaseURL, fetchDataFromServer } from "./api.js";
 import { createMovieCard } from "./movie-card.js";
 //import { search } from "./search.js";
 
+const urlParams = new URLSearchParams(window.location.search); 
 
-const movieId = window.localStorage.getItem("movieId");
+const movieId = urlParams.get('id');
+
 const pageContent = document.querySelector("[page-content]");
 
 

@@ -220,7 +220,7 @@ function showMovieData(data) {
                             
                                 <!-- icons -->
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
-                                    <button class="btn btn-warning me-md-2 btnPlay" type="button" id="${id}"><img
+                                    <button class="btn btn-warning me-md-2 btnPlay" type="button" onclick="getSingleMoviesId(this)"  id="${id}"><img
                                             src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
                                     <button class="btn btn-warning me-md-2 btnBookmark" type="button" onclick="getMovieId(this)" id="${id}"><img
                                             src="../assets/icons/bookmark-check.svg" width="25px" height="25px" ></button>
@@ -292,4 +292,17 @@ function dispalyBookmarkedTrue(val) {
 
 		console.log(val);
 	}
+}
+
+
+function getSingleMoviesId(e){
+
+	const singleId = e.id; 
+
+	localStorage.setItem('single_movie_id', JSON.stringify(singleId));
+
+	window.location.href=`detail.html?id=${singleId}`;
+
+	console.log(singleId);
+
 }
