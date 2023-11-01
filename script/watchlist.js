@@ -4,7 +4,7 @@ const BASE_URL2 = 'https://api.themoviedb.org/3/movie/';
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
 
-const arrMoviesData = JSON.parse(localStorage.getItem('arrMovies'));
+const arrMoviesData = JSON.parse(sessionStorage.getItem('arrMovies'));
 
 
 
@@ -157,8 +157,8 @@ function showWatchlistMovies(movData) {
                                         <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
                                             <button class="btn btn-warning me-md-2 btnBookmark" type="button" onclick="getSingleMoviesId(this)"  id="${id}"><img
                                                     src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
-                                            <button class="btn btn-warning me-md-2 btnBookmark" type="button" onclick="getMovieId(this)" id="${id}"><img
-                                                    src="../assets/icons/bookmark-check.svg" width="25px" height="25px" ></button>
+                                            <button class="btn btn-warning me-md-2 btnBookmark" type="button" onclick="removeMovie(this)" id="${id}"><img
+                                                    src="../assets/icons/bookmark-x-fill.svg" width="25px" height="25px" ></button>
                                         </div>
                                     </div>
                                 </div>
@@ -183,5 +183,11 @@ function getSingleMoviesId(e){
 	window.location.href=`detail.html?id=${singleId}`;
 
 	console.log(singleId);
+
+}
+
+function removeMovie(el){
+
+
 
 }
