@@ -86,15 +86,23 @@
 
             <!-- Filters section START -->
 
+            <div class="btn-group py-4 d-flex justify-content-end" role="group" aria-label="Basic checkbox toggle button group">
+                <input type="checkbox" class="btn-check filter-label" id="filterLbl" autocomplete="off">
+                <label class="btn btn-outline-danger filterbtn-custom" for="btncheck1">Sort:</label>
+              
+                <input type="checkbox" class="btn-check" id="filter_year" autocomplete="off">
+                <label class="btn btn-outline-dark filterbtn-custom" for="filter_year">By Year</label>
+              
+                <input type="checkbox" class="btn-check" id="filter_rating" autocomplete="off">
+                <label class="btn btn-outline-dark filterbtn-custom" for="filter_rating">By Rating</label>
+              </div>
 
-
-
-
+              <!-- Filter Section end -->
             <!-- --------------------------------------- -->
 
             <!-- START OF LIBRARY -->
 
-            <div class="row row-cols-2">
+            <div class="row row-cols-2 mx-2">
                 <!-- sidebar -->
                 <div class="col-12 col-lg-3 col-md-4 d-flex flex-column tag-col" id="tags">
                     <div class="btn btn-secondary btn-sm rounded-4 m-1 tag">Action</div>
