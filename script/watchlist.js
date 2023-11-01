@@ -1,7 +1,7 @@
 // tmdb global variables 
-const API_KEY = '?api_key=' + '2348b3158ad558d789bf75055253fb91';
+const API_KEY2 = '?api_key=' + '2348b3158ad558d789bf75055253fb91';
 const BASE_URL2 = 'https://api.themoviedb.org/3/movie/';
-const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
+const IMAGE_URL2 = 'https://image.tmdb.org/t/p/w500';
 
 
 const arrMoviesData = JSON.parse(sessionStorage.getItem('arrMovies'));
@@ -35,7 +35,7 @@ function getIdData(arrData) {
 
             let movieId = arrMoviesData[i];
 
-            const apiUrl = BASE_URL2 + movieId + API_KEY;
+            const apiUrl = BASE_URL2 + movieId + API_KEY2;
 
             console.log("the url: " + apiUrl);
 
@@ -145,7 +145,7 @@ function showWatchlistMovies(movData) {
 
         movieDataElement.innerHTML = `
                             <div class="card rounded-4" style="width: 18rem;">
-                                <img src="${poster_path ? IMAGE_URL + poster_path : "../assets/images/download (7).jpeg"}" class="rounded-4 mov-movie-poster">
+                                <img src="${poster_path ? IMAGE_URL2 + poster_path : "../assets/images/download (7).jpeg"}" class="rounded-4 mov-movie-poster">
                                     <div class="card-content">
                                         <h4 class="lblMovName py-3" id="title">${title}</h4>
                                         <h5 class="lblMeta" id="year">${release_date}</h5>
