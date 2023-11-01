@@ -19,9 +19,9 @@ window.addEventListener('scroll', function() {
 
 // IMPLEMENTING tmdB movie api 
 
-const API_KEY = '?api_key=' + '94b6a2d34c3b54e7f76a308cedd0b6b3';
-const BASE_URL = 'https://api.themoviedb.org/3/movie/popular/';
-const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
+//const API_KEY = '?api_key=' + '94b6a2d34c3b54e7f76a308cedd0b6b3';
+//const BASE_URL = 'https://api.themoviedb.org/3/movie/popular/';
+//const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
 $(document).ready(function(){
     getMoviesByFirstLetter('a');

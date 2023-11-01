@@ -185,3 +185,4 @@ function getSingleMoviesId(e){
 	console.log(singleId);
 
 }
+
