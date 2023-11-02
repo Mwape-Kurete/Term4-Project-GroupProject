@@ -245,3 +245,36 @@ const movContainer_upcoming = document.getElementById('upcoming_mov_container');
 
     });
 }
+
+function displayUpcomingMovies(up_data){
+
+  movContainer_new.innerHTML = '';
+
+  up_data.forEach(movie_results => {
+
+    const {title, poster_path, release_date, vote_average, original_language, popularity, id} = movie_results; 
+
+    const cardEl = document.createElement('div'); 
+
+    cardEl.classList.add('col', 'col-3', 'col-lg-3', 'col-md-4', 'py-4', 'd-flex', 'align-items-stretch', 'mov_card_full');
+
+    cardEl.innerHTML = `<div class="card rounded-4" style="width: 18rem;" id="${id}">
+    <img src="${poster_path ? IMAGE_URL + poster_path: "../assets/images/movie card 5.png" }" class="card-img-top" alt="Movie Poster not available" id="img_card">
+    <div class="card-body d-flex flex-column">
+        <h4 class="title">${title}</h4>
+        <h6 class="lang">${original_language}</h6>
+        <h6 class="year">${release_date}</h6>
+        <p class="card-text popular_score">${popularity}</p>
+        <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
+
+        <div class="watch-button mt-2 justify-content-md-end">
+          <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
+        </div>
+
+    </div>
+</div>`
+
+    movContainer_upcoming.append(cardEl);
+
+  });
+}
