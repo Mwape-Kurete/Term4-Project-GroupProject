@@ -166,8 +166,9 @@ const movContainer_upcoming = document.getElementById('upcoming_mov_container');
           <p class="card-text popular_score">${popularity}</p>
           <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
 
-          <div class="watch-button mt-2 justify-content-md-end">
+          <div class="button-group mt-2 d-grid gap-2 d-md-flex justify-content-md-end ">
             <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
+            <button type="button" class="btn btn-light btn-sm watchNow" id="${id}" >Watch Now</button>
           </div>
 
 
@@ -203,6 +204,7 @@ const movContainer_upcoming = document.getElementById('upcoming_mov_container');
 
           <div class="watch-button mt-2 justify-content-md-end">
             <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
+            <button type="button" class="btn btn-light btn-sm watchNow" id="${id}" >Watch Now</button>
           </div>
 
       </div>
@@ -236,6 +238,7 @@ const movContainer_upcoming = document.getElementById('upcoming_mov_container');
 
           <div class="watch-button mt-2 justify-content-md-end">
             <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
+            <button type="button" class="btn btn-light btn-sm watchNow" id="${id}" >Watch Now</button>
           </div>
 
       </div>
@@ -268,7 +271,8 @@ function displayUpcomingMovies(up_data){
         <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
 
         <div class="watch-button mt-2 justify-content-md-end">
-          <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
+            <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
+            <button type="button" class="btn btn-light btn-sm watchNow" id="${id}" >Watch Now</button>
         </div>
 
     </div>

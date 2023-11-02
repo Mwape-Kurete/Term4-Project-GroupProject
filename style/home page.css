@@ -176,3 +176,10 @@ body {
 .movie-item .text-body-tertiary {
     color: #3b0f0f;
   }
+
+  /* Buttons in cards */
+  .button-group{
+    margin-top: 15%;
+    bottom: 0 !important;
+    position: absolute;
+  }
