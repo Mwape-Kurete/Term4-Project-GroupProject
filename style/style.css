@@ -80,6 +80,10 @@
     --transition-long: 500ms ease;
   
   }
+
+.title h1{
+  margin-left: 800px;
+}
   
   
   
@@ -151,6 +155,7 @@
     background-color: var(--banner-background);
     border-radius: var(--radius-8);
   }
+
   
   
   
