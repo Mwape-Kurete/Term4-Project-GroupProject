@@ -267,7 +267,7 @@ function getMovieId(element) {
 
 	console.log(arrWatchlistMovies);
 
-	localStorage.setItem('arrMovies', JSON.stringify(arrWatchlistMovies));
+	sessionStorage.setItem('arrMovies', JSON.stringify(arrWatchlistMovies));
 
 	dispalyBookmarkedTrue(flag);
 
