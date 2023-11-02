@@ -248,7 +248,7 @@ const movContainer_upcoming = document.getElementById('upcoming_mov_container');
 
 function displayUpcomingMovies(up_data){
 
-  movContainer_new.innerHTML = '';
+  movContainer_upcoming.innerHTML = '';
 
   up_data.forEach(movie_results => {
 
@@ -286,6 +286,6 @@ function storeMovie(idElement){
 
   var isChecked = true; 
 
-  
+
 
 }
