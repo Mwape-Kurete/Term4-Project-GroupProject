@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Mwape Kurte - 231115">
+    <meta name="author" content="Mwape Kurete - 231115">
     <meta name="description" content="Class 1 Group 1 Project - Page assigned to Mwape Kurete 231115">
-    <title>CineScape - Watchlist</title>
+    <title>CineScape - Movie Library</title>
 
     <!--stylesheet-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,14 +16,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Coustard:wght@900&family=M+PLUS+Rounded+1c:wght@100;300;400;500&family=Poppins:wght@600&display=swap"
         rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Alice&family=Coustard:wght@900&family=Libre+Franklin:ital,wght@0,600;1,300&family=Pridi:wght@200;500;600&display=swap"
         rel="stylesheet">
-
     <link href="../style/main.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -35,7 +34,7 @@
         <div class="container-fluid">
 
             <a class="navbar-brand" href="../index.html">
-                <img img src="../assets/logo/cs_logo_design.svg" alt="logo" width="45" height="36">
+                <img src="../assets/logo/cs_logo_design.svg" alt="logo" width="45" height="36" class="nav-logo-cs">
             </a>
 
             <div class="logoTxt">
@@ -48,10 +47,10 @@
                     <a class="nav-link nav-link-custom" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-custom" href="/pages/library.html">Library</a>
+                    <a class="nav-link active nav-link-custom" aria-current="page" href="library.html">Library</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active nav-link-custom" aria-current="page" href="watchlist.html">Watchlist</a>
+                    <a class="nav-link nav-link-custom" href="/pages/watchlist.html">Watchlist</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-custom" href="../sign in.html">Log Out</a>
@@ -67,43 +66,66 @@
 
     <!-- ---------------------------------------------------------------------------------------------------- -->
 
+    <!-- ---------------------------------------------------------------------------------------------------- -->
     <!-- START OF BODY CONTENT -->
-    <section class="watchlist-content">
+
+    <section class="movie-lib-grid">
+
+        <!-- Start of Library Section -->
         <div class="container">
 
-            <div class="row justify-content-lg-start heading-watch-row">
+            <!-- Page Header Start -->
+            <div class="row justify-content-lg-start heading-watch-row py-4">
                 <div class="col-12 heading-watch-col">
-                    <h1 id="watchlist-H1">Your Watchlist,</h1>
+                    <h1 id="library-H1">Our Movie Library</h1>
                 </div>
             </div>
+            <!-- Page Header End -->
 
-            <!-- start of watchlist Cards -->
+            <!-- -------------------------------------------- -->
 
-            <div class="row row-cols-4 py-4 watchlist-mov" id="watchlist-movies">
+            <!-- Filters section START -->
+            <div class="row row-cols-4 py-4 radioBTN">
+                <div class="col col-12 col-lg-3 col-md-4 d-flex tag-col overflow-auto" id="tags">
+                    <div class="btn btn-secondary btn-sm rounded-4 m-1 tag">Action</div>
+                    <div type="button" class="btn btn-secondary btn-sm rounded-4 m-1 tag">Adventure</div>
+                    <div type="button" class="btn btn-secondary btn-sm tag rounded-4 m-1">Drama</div>
+                    <div type="button" class="btn btn-secondary btn-sm tag rounded-4 m-1">Comedy</div>
+                </div>
                 
-                <!-- Movie watchlist cards go here -->
             </div>
-            <!-- end of watchlist Cards - -->
 
-            <div class=" row showMoreBtn justify-content-center py-5">
-                <div class="col-12 show-more-btn">
-                    <button class="btn btn-outline-danger" disabled>Show More</button>
-                </div>
+
+
+
+
+            <!-- --------------------------------------- -->
+
+            <!-- START OF LIBRARY -->
+
+            <div class="row row-cols-4 py-4 library-mov-container" id="movies">
+                <!-- Movie library cards go here -->
+                
             </div>
+
+            <!-- END OF LIBRARY -->
 
         </div>
     </section>
-    <!-- END OF BODY CONTENT -->
+
+    <!-- END OF BODY CONTENT - -->
 
     <!-- ------------------------------------- end of body <js scripts below -------------------------------- -->
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
     
     <script src="../script/main.js"></script>
-    <script src="../script/watchlist.js"></script>
+    <script src="../script/library.js"></script>
     <script src="../script/global.js"></script>
+
 </body>
 
 </html>
