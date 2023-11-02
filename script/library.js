@@ -253,7 +253,7 @@ function showMovieData(data) {
                                 <h6 class="imd-score" id="rating"> IMBD - ${vote_average} </h6>
                             
                                 <!-- icons -->
-                                <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont mx-auto">
                                     <button class="btn btn-warning me-md-2 btnPlay icon-btn" type="button" onclick="getSingleMoviesId(this)"  id="${id}"><img
                                             src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
                                     <button class="btn btn-warning me-md-2 btnBookmark icon-btn" type="button" onclick="getMovieId(this)" id="${id}"><img
