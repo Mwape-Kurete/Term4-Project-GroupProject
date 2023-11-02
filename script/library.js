@@ -303,11 +303,11 @@ function getMovieId(element) {
 
 	sessionStorage.setItem('arrMovies', JSON.stringify(arrWatchlistMovies));
 
-	dispalyBookmarkedTrue(flag);
+	displayBookmarkedTrue(flag);
 
 }
 
-function dispalyBookmarkedTrue(val) {
+function displayBookmarkedTrue(val) {
 
 	const markedMovie = document.getElementsByClassName('.btnBookmark');
 
