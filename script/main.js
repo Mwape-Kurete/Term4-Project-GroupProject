@@ -286,6 +286,30 @@ function storeMovie(idElement){
 
   var isChecked = true; 
 
-  
+  console.log(movieID); 
+
+  if (watchlistArray.length === 0) {
+
+		watchlistArray.push(movieID);
+
+	} else {
+
+		if (watchlistArray.includes(movieID)) {
+			watchlistArray.forEach((id, idx) => {
+				if (id === movieID) {
+					watchlistArray.splice(idx, 1);
+
+					flag = false;
+				}
+			})
+		} else {
+
+			watchlistArray.push(movieID);
+		}
+	}
+
+	console.log(watchlistArray);
+
+	sessionStorage.setItem('movieArray_home', JSON.stringify(watchlistArray));
 
 }

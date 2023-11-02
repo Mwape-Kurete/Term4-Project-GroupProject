@@ -4,8 +4,10 @@ const BASE_URL2 = 'https://api.themoviedb.org/3/movie/';
 const IMAGE_URL2 = 'https://image.tmdb.org/t/p/w500';
 
 
-const arrMoviesData = JSON.parse(sessionStorage.getItem('arrMovies'));
+const arrMovies_Library = JSON.parse(sessionStorage.getItem('arrMovies'));
+const arrMovies_Index =  JSON.parse(sessionStorage.getItem('movieArray_home'));
 
+const arrMoviesData = arrMovies_Index.concat(arrMovies_Library);
 
 
 const watchlistContainer = document.getElementById('watchlist-movies');
