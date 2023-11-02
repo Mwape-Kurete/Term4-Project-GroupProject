@@ -125,3 +125,61 @@ body {
     height: 200vh; 
     transition: background-color 2.1s; 
 }
+
+.watchlist-button{
+    background-color: #566246;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.watchlist-button :hover{
+    background-color: #566246;
+}
+
+.movie-item {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0.375rem;
+    background-color: #29485D;
+  }
+  
+.movie-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.375rem 0.375rem 0 0;
+  }
+  
+.movie-item .card-body {
+    display: flex;
+    flex-direction: column;
+    background-color: #29485D;
+  }
+  
+.movie-item h4, .movie-item h6 {
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 0;
+  }
+  
+.movie-item p {
+    color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 0;
+  }
+  
+.movie-item .text-body-tertiary {
+    color: #3b0f0f;
+  }
+
+  /* Buttons in cards */
+  .button-group{
+    margin-top: 15%;
+    bottom: 0 !important;
+    position: absolute;
+  }

@@ -4,8 +4,10 @@ const BASE_URL2 = 'https://api.themoviedb.org/3/movie/';
 const IMAGE_URL2 = 'https://image.tmdb.org/t/p/w500';
 
 
-const arrMoviesData = JSON.parse(sessionStorage.getItem('arrMovies'));
+const arrMovies_Library = JSON.parse(sessionStorage.getItem('arrMovies'));
+const arrMovies_Index =  JSON.parse(sessionStorage.getItem('movieArray_home'));
 
+const arrMoviesData = arrMovies_Index.concat(arrMovies_Library);
 
 
 const watchlistContainer = document.getElementById('watchlist-movies');
@@ -134,15 +136,21 @@ function showWatchlistMovies(movData) {
 
     watchlistContainer.innerHTML = '';
 
+    let count = 0; 
+
     movData.forEach(movData => {
 
         const { title, poster_path, release_date, vote_average, original_language, popularity, id } = movData;
+
 
 
         const movieDataElement = document.createElement('div');
 
         movieDataElement.classList.add('col', 'col-12', 'col-lg-3', 'col-md-4', 'd-flex', 'align-items-stretch', 'py-4', 'movie-cards');
 
+        movieDataElement.setAttribute('id', `card-no${count}`);
+
+        
         movieDataElement.innerHTML = `
                             <div class="card rounded-4" style="width: 18rem;">
                                 <img src="${poster_path ? IMAGE_URL2 + poster_path : "../assets/images/download (7).jpeg"}" class="rounded-4 mov-movie-poster">
@@ -157,7 +165,7 @@ function showWatchlistMovies(movData) {
                                         <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
                                             <button class="btn btn-warning me-md-2 btnBookmark" type="button" onclick="getSingleMoviesId(this)"  id="${id}"><img
                                                     src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
-                                            <button class="btn btn-warning me-md-2 btnBookmark" type="button" onclick="removeMovie(this)" id="${id}"><img
+                                            <button class="btn btn-warning me-md-2 btnBookmark" type="button" onclick="removeMovie(${count})" id="${id}"><img
                                                     src="../assets/icons/bookmark-x-fill.svg" width="25px" height="25px" ></button>
                                         </div>
                                     </div>
@@ -166,6 +174,8 @@ function showWatchlistMovies(movData) {
 
         watchlistContainer.append(movieDataElement);
 
+        count = count + 1;
+        console.log(count);
     });
 
 }
@@ -186,8 +196,11 @@ function getSingleMoviesId(e){
 
 }
 
-function removeMovie(el){
+function removeMovie(cardId){
 
+    const selectCard = document.getElementById(`card-no${cardId}`); 
 
+    selectCard.remove();
+    
 
 }

@@ -9,7 +9,10 @@ const API_URL_ = BASE_URL_ + API_KEY_;
 
 //const GEN_URL= 'https://api.themoviedb.org/3/discover/movie/';
 
-//let mov_id; 
+//filter appends
+
+const YEAR_FILT = "&sort_by=primary_release_date.asc"; 
+const VOTE_FILT = "&sort_by=vote_average.desc";
 
 //const API_GEN = GEN_URL + API_KEY;
 
@@ -112,7 +115,37 @@ $(document).ready(function () {
 
 });
 
+function sendFilterApi(select){
 
+	const filterSelect = select.id; 
+
+	const api_yearFilter = API_URL_ + YEAR_FILT;
+	const api_ratingFilter = API_URL_ + VOTE_FILT; 
+	const defaultUrl = API_URL_;
+
+	if(filterSelect == "default"){
+
+		//only if show all filter is selected
+		console.log("selected: " + filterSelect);
+
+		getMovieData(defaultUrl);
+
+	} else if(filterSelect == "filter_year" ){
+
+		//only if year filter is selected
+		console.log("selected: " + filterSelect);
+
+		getMovieData(api_yearFilter);
+
+	}else if(filterSelect == "filter_rating"){
+		//only if rating filter selected
+		console.log("selected: " + filterSelect);
+
+		getMovieData(api_ratingFilter);
+	}
+	
+	
+}
 
 //calling immediatly
 setGenre();
@@ -124,6 +157,7 @@ function setGenre() {
 	genreTypes.forEach(genre => {
 
 		const tg = document.createElement('div');
+		
 		tg.classList.add('btn', 'btn-secondary', 'btn-sm', 'rounded-4', 'm-1', 'tag',);
 		tg.id = genre.id;
 		tg.innerText = genre.name;
@@ -220,9 +254,9 @@ function showMovieData(data) {
                             
                                 <!-- icons -->
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont">
-                                    <button class="btn btn-warning me-md-2 btnPlay" type="button" onclick="getSingleMoviesId(this)"  id="${id}"><img
+                                    <button class="btn btn-warning me-md-2 btnPlay icon-btn" type="button" onclick="getSingleMoviesId(this)"  id="${id}"><img
                                             src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
-                                    <button class="btn btn-warning me-md-2 btnBookmark" type="button" onclick="getMovieId(this)" id="${id}"><img
+                                    <button class="btn btn-warning me-md-2 btnBookmark icon-btn" type="button" onclick="getMovieId(this)" id="${id}"><img
                                             src="../assets/icons/bookmark-check.svg" width="25px" height="25px" ></button>
                                 </div>
                             </div>
@@ -269,11 +303,11 @@ function getMovieId(element) {
 
 	sessionStorage.setItem('arrMovies', JSON.stringify(arrWatchlistMovies));
 
-	dispalyBookmarkedTrue(flag);
+	displayBookmarkedTrue(flag);
 
 }
 
-function dispalyBookmarkedTrue(val) {
+function displayBookmarkedTrue(val) {
 
 	const markedMovie = document.getElementsByClassName('.btnBookmark');
 
