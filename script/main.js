@@ -278,3 +278,14 @@ function displayUpcomingMovies(up_data){
 
   });
 }
+
+
+function storeMovie(idElement){
+
+  const movieID = idElement.id; 
+
+  var isChecked = true; 
+
+  
+
+}
