@@ -88,16 +88,20 @@
 
             <div class="btn-group py-4 d-flex justify-content-end" role="group"
                 aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked disabled>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked
+                    disabled>
                 <label class="btn btn-outline-primary" for="btnradio1">Sort By: </label>
 
-                <input type="radio" class="btn-check" name="btnradio" id="default" autocomplete="off" onclick="sendFilterApi(this)">
+                <input type="radio" class="btn-check" name="btnradio" id="default" autocomplete="off"
+                    onclick="sendFilterApi(this)">
                 <label class="btn btn-outline-dark" for="default"> Show All: </label>
 
-                <input type="radio" class="btn-check" name="btnradio" id="filter_year" autocomplete="off" onclick="sendFilterApi(this)">
+                <input type="radio" class="btn-check" name="btnradio" id="filter_year" autocomplete="off"
+                    onclick="sendFilterApi(this)">
                 <label class="btn btn-outline-dark" for="filter_year">Year</label>
 
-                <input type="radio" class="btn-check" name="btnradio" id="filter_rating" autocomplete="off" onclick="sendFilterApi(this)">
+                <input type="radio" class="btn-check" name="btnradio" id="filter_rating" autocomplete="off"
+                    onclick="sendFilterApi(this)">
                 <label class="btn btn-outline-dark" for="filter_rating">Rating</label>
             </div>
 
@@ -105,27 +109,25 @@
             <!-- --------------------------------------- -->
 
             <!-- START OF LIBRARY -->
+            <!-- Genres -->
+            <div class="col-12 col-lg-3 col-md-4 d-flex flex-sm-row overflow-y-scroll tag-col mx-auto" id="tags">
+                <div class="btn btn-secondary btn-sm rounded-4 m-1 tag">Action</div>
+                <div type="button" class="btn btn-secondary btn-sm rounded-4 m-1 tag">Adventure</div>
+                <div type="button" class="btn btn-secondary btn-sm tag rounded-4 m-1">Drama</div>
+                <div type="button" class="btn btn-secondary btn-sm tag rounded-4 m-1">Comedy</div>
+            </div>
 
-            <div class="row row-cols-2 mx-2">
-                <!-- sidebar -->
-                <div class="col-12 col-lg-3 col-md-4 d-flex flex-column tag-col" id="tags">
-                    <div class="btn btn-secondary btn-sm rounded-4 m-1 tag">Action</div>
-                    <div type="button" class="btn btn-secondary btn-sm rounded-4 m-1 tag">Adventure</div>
-                    <div type="button" class="btn btn-secondary btn-sm tag rounded-4 m-1">Drama</div>
-                    <div type="button" class="btn btn-secondary btn-sm tag rounded-4 m-1">Comedy</div>
-                </div>
+            <hr class="section break">
 
-                <!-- library -->
-                <div class="row row-cols-4 py-4 library-mov-container card-col" id="movies">
+            <!-- library -->
+            <div class="row row-cols-4 py-4 library-mov-container card-col mx-lg-auto" id="movies">
 
-                    <!-- Movie library cards go here -->
-
-                </div>
+                <!-- Movie library cards go here -->
 
             </div>
 
 
-
+            <hr class="section break">
             <!-- END OF LIBRARY -->
 
         </div>

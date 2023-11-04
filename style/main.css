@@ -52,7 +52,7 @@ ul {
 
 /* large devices */
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     h1 {
         font-size: 36px;
     }
@@ -124,7 +124,7 @@ ul {
 
 /* small devices */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     h1 {
         font-size: 36px;
     }
@@ -184,7 +184,7 @@ ul {
         height: 5rem;
         overflow-y: scroll;
     }
-}
+} */
 
 /* 
 @media (max-width: 750px) {
