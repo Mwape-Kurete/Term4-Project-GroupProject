@@ -1,5 +1,8 @@
 body {
-    background-color: #FFF1D6;
+    background-image: url(../assets/images/3658975.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
  }
  
  nav{
@@ -36,7 +39,7 @@ body {
  }
  
  .name{
-     font-family: 'Coustard', serif;
+    font-family: 'Coustard', serif;
      font-size: 45px;
      font-weight: bolder;
      color:  #FFF1D6;
@@ -53,10 +56,11 @@ body {
      margin-left: 100px;
      border-radius: 4px;
      font-size: 12px;
+     color:#566246;
  }
  
  #form h1 {
-     color: #0f2027;
+     color:#566246;
      text-align: center;
  }
  
@@ -67,17 +71,17 @@ body {
      color: white;
      background-color: #566246;
      border: none;
-     border-radius: 4px;
+     
  }
  
  .input-control {
      display: flex;
      flex-direction: column;
+     color: white;
  }
  
  .input-control input {
-     border: 2px solid rgb(255, 255, 255);
-     border-radius: 50px;
+     border-radius: 5%;
      display: block;
      font-size: 12px;
      padding: 10px;

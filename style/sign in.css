@@ -1,5 +1,8 @@
 body {
-    background-color: #FFF1D6;
+    background-image: url(../assets/images/3658921.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
  }
  
  nav{
@@ -19,6 +22,10 @@ body {
  .nav-link.active{
     color:#C17240;
     
+}
+
+.name{
+    font-family: 'Coustard', serif;
 }
  
  .nav{
