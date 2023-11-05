@@ -83,6 +83,26 @@ const validateInputs = () => {
     return valid;
 };
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Check if there's user data in local storage
+    const storedData = localStorage.getItem("formData");
+
+    // Check if stored data exists and parse it from JSON
+    if (storedData) {
+        const userData = JSON.parse(storedData);
+
+        // Assuming you have an element in your navbar with the id "user-greeting" to display the username
+        const userGreeting = document.getElementById("user-greeting");
+
+        // Update the content of the "user-greeting" element with the stored username
+        userGreeting.textContent = `Hello, ${userData.username}!`;
+
+        // You can also hide or show elements in your navbar based on whether user data exists
+        // For example, you can hide the login and registration links and show a "Log Out" link.
+        // You will need to adjust your HTML structure accordingly.
+    }
+});
+
 const saveFormDataToLocalStorage = () => {
     // Create an object to store the form data
     const formData = {
@@ -94,3 +114,5 @@ const saveFormDataToLocalStorage = () => {
     // Convert the object to a JSON string and store it in local storage
     localStorage.setItem('formData', JSON.stringify(formData));
 };
+
+

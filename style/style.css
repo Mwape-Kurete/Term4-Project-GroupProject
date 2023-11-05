@@ -1,18 +1,3 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2023 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
@@ -20,7 +5,9 @@
      * COLORS
      */
   
-    --background: rgb(86, 96, 59);
+    background-image: url(../assets/images/3658921.jpg);
+    background-position: center;
+    background-size: cover;
     --banner-background: hsla(250, 6%, 20%, 1);
     --white-alpha-20: hsl(35, 100%, 22%);
     --on-background: hsla(220, 100%, 95%, 1);
@@ -83,6 +70,8 @@
 
 .title h1{
   margin-left: 800px;
+  font-family: 'Coustard', serif;
+  margin-top: -100px;
 }
   
   
