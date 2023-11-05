@@ -44,227 +44,63 @@ ul {
     color: #FFF1D6;
 }
 
-/* ---------------------------------------------------------------- */
-/* RESPONSIVENESS */
-
-/* widths: 480, 767, 768 and 979 and 1200 */
+/* -----------------------------------------------------------
+----- */
 
 
-/* large devices */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
 
-/* @media (max-width: 1024px) {
-    h1 {
-        font-size: 36px;
-    }
-
-    .card-col {
-        width: 56rem;
-    }
-
-    .movie-cards {
-        height: 48rem;
-    }
-
-    .tag-col {
-        width: 8rem;
-        overflow-y: scroll;
-    }
-
-    .navbar {
-        width: auto;
-    }
 }
 
-@media (min-width: 1200px) {
-    h1 {
-        font-size: 52px;
-    }
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
 
-    .nav-logo-cs {
-        width: 60px;
-        height: 48px;
-    }
-
-    .card-col {
-        width: 71rem;
-    }
 }
 
-/* medium devices */
-/* @media (min-width: 992px) {
+/* large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
 
-    .card-col {
-        width: 21rem;
-    }
-
-    .tag-col {
-        width: 10rem;
-        height: 15rem;
-        overflow-y: scroll;
-    }
-
-    .card-col {
-        width: 32rem;
-    }
-
-    .icon-btn img{
-        width: 20px;
-        height: 20px;
-    }
-
-    .icon-btn{
-        width: 40px;
-        height: 40px;
-    }
-
-    .navbar {
-        width: auto;
-    }
-} */
-
-/* small devices */
-
-/* @media (max-width: 768px) {
-    h1 {
-        font-size: 36px;
-    }
-
-    .card-col {
-        width: 70rem;
-    }
-
-    .navbar {
-        width: auto;
-    }
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 36px;
-    }
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
 
-    .navbar {
-        width: auto;
-    }
-
-    .movie-cards {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .heading-watch-row {
-        margin-left: 5%;
-    }
-
-    .radioBTN {
-        margin-left: 5%;
-    }
-
-    .checkBTN {
-        margin-left: 5%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .icons-cont {
-        margin-left: 5%;
-    }
-
-    .movie-cards {
-        height: 55rem;
-    }
-
-    .card-col {
-        width: 42rem;
-        align-items: center;
-    }
-
-    .tag-col {
-        width: 8rem;
-        height: 5rem;
-        overflow-y: scroll;
-    }
-} */
-
-/* 
-@media (max-width: 750px) {
-
-    .movie-cards{
-        justify-content: center;
-        align-items: center;
-    }
-
-    .heading-watch-row{
-        margin-left: 5%;
-    }
-
-    .radioBTN{
-        margin-left: 5%;
-    }
-
-    .checkBTN{
-        margin-left: 5%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .icons-cont{
-        margin-left: 5%;
-    }
-
-    .movie-cards{
-        height: 55rem;
-    }
-
-    .card-col{
-        width: 20rem;
-        align-items: center;
-    }
-
-    .tag-col{
-        width: 8rem;
-        height: 5rem;
-        overflow-y: scroll;
-     }
 }
- */
 
-/* 
-@media (max-width: 768px) {
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
 
-    .movie-cards{
-        justify-content: center;
-        align-items: center;
-    }
+}
+/* MAX MEDIA QUERIES  */
 
-    .heading-watch-row{
-        margin-left: 5%;
-    }
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
 
-    .radioBTN{
-        margin-left: 5%;
-    }
+}
 
-    .checkBTN{
-        margin-left: 5%;
-        justify-content: center;
-        align-items: center;
-    }
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
 
-    .icons-cont{
-        margin-left: 5%;
-    }
+}
 
-    .movie-cards{
-        height: 40rem;
-    }
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
 
-} */
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+
+}
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) { 
+    
+}
 
 
-
-/* RESPONSIVENESS END */
-/* ---------------------------------------------------------------- */
+/*---------------------------------------------------------------- */
 /* MWAPE - WATCHLIST CSS */
 
 .logoTxt {
@@ -437,11 +273,45 @@ font-family: 'Pridi', serif;
 
 /* START OF MWAPE LIBBRARY CSS */
 
+/* genre tags */
 .tag-col {
-    max-width: 10rem;
+    max-width: 500rem;
     margin-top: 3.5%;
 }
 
+.tag{
+    font-size: x-small;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+/* scroll bar */
+/* --------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #FFF1D6;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #566246;
+    width: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #353d2b;
+  }
+  /* scrollbar end */
+
+/* ----------------------------------- */
 .radioBTN {
     margin-right: 1%;
 }

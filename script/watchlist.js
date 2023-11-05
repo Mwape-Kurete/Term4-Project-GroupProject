@@ -1,22 +1,39 @@
+// start of global Variables 
+
 // tmdb global variables 
 const API_KEY2 = '?api_key=' + '2348b3158ad558d789bf75055253fb91';
 const BASE_URL2 = 'https://api.themoviedb.org/3/movie/';
 const IMAGE_URL2 = 'https://image.tmdb.org/t/p/w500';
 
+// ----------------------------------------------------------------------------------------------------- 
+
+// fetching from local and session storage
 
 const arrMovies_Library = JSON.parse(sessionStorage.getItem('arrMovies'));
 const arrMovies_Index =  JSON.parse(sessionStorage.getItem('movieArray_home'));
 
 const arrUserDetail = JSON.parse(localStorage.getItem('formData'));
 
+// -----------------------------------------------------------------------------------------------------
+
+// concatinating arrays from library and home page 
+
 const arrMoviesData = arrMovies_Index.concat(arrMovies_Library);
 
+// -----------------------------------------------------------------------------------------------------
+
+// getting html containers 
 
 const watchlistContainer = document.getElementById('watchlist-movies');
 
-const navContainer = document.getElementById('username');
+// -----------------------------------------------------------------------------------------------------
+
 
 //end of gloabal vars 
+
+// -----------------------------------------------------------------------------------------------------
+
+
 
 $(document).ready(function () {
 
@@ -216,17 +233,11 @@ function removeMovie(cardId){
 
 function getUsername(userDetails){
 
-    const username = userDetails[0]; 
+    const navContainer = document.getElementById('username');
 
-    navContainer.innerHTML = ''; 
+    const username = userDetails[1]; 
 
-    const userElement = document.createElement('a');
-
-    userElement.classList.add('nav-link', 'disabled', 'nav-link-custom');
-
-    navContainer.innerHTML = `${username}`;
-
-    navContainer.append(userElement);
+    navContainer.innerHTML = `Hello, ${username}`; 
 
 
 }

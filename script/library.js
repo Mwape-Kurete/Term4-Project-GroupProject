@@ -1,4 +1,4 @@
-// IMPLEMENTENTING tmdB api 
+// GLOBAL VARIABLES 
 
 // tmdb global variables 
 const API_KEY_ = '?api_key=' + '94b6a2d34c3b54e7f76a308cedd0b6b3';
@@ -9,16 +9,17 @@ const API_URL_ = BASE_URL_ + API_KEY_;
 
 //const GEN_URL= 'https://api.themoviedb.org/3/discover/movie/';
 
-//filter appends
+//filter appends -> global variables 
 
 const YEAR_FILT = "&sort_by=primary_release_date.asc"; 
 const VOTE_FILT = "&sort_by=vote_average.desc";
 
-//const API_GEN = GEN_URL + API_KEY;
+// end of filter appends -> global variables 
 
 const movieContainer = document.getElementById('movies');
 const tagsElement = document.getElementById('tags');
 
+const arrUserDetail = JSON.parse(localStorage.getItem('formData'));
 
 const arrWatchlistMovies = [];
 
@@ -338,5 +339,16 @@ function getSingleMoviesId(e){
 	window.location.href=`detail.html?id=${singleId}`;
 
 	console.log(singleId);
+
+}
+
+function getUsername(userDetails){
+
+    const navContainer = document.getElementById('username');
+
+    const username = userDetails[0]; 
+
+    navContainer.innerHTML = `Hello, ${username}`; 
+
 
 }
