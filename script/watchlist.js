@@ -12,7 +12,7 @@ const IMAGE_URL2 = 'https://image.tmdb.org/t/p/w500';
 const arrMovies_Library = JSON.parse(sessionStorage.getItem('arrMovies'));
 const arrMovies_Index =  JSON.parse(sessionStorage.getItem('movieArray_home'));
 
-const arrUserDetail = JSON.parse(localStorage.getItem('formData'));
+const arrUserDetail_watch = JSON.parse(localStorage.getItem('formData'));
 
 // -----------------------------------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     getIdData(arrMoviesData);
 
-    getUsername(arrUserDetail);
+    getUsername(arrUserDetail_watch);
 
 
 });

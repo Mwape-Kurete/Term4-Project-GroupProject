@@ -19,7 +19,7 @@ const VOTE_FILT = "&sort_by=vote_average.desc";
 const movieContainer = document.getElementById('movies');
 const tagsElement = document.getElementById('tags');
 
-const arrUserDetail = JSON.parse(localStorage.getItem('formData'));
+const arrUserDetail_lib = JSON.parse(localStorage.getItem('formData'));
 
 const arrWatchlistMovies = [];
 
@@ -113,7 +113,7 @@ getMovieData(API_URL_);
 $(document).ready(function () {
 
 	
-    getUsername(arrUserDetail);
+    getUsername(arrUserDetail_lib);
 
 });
 
