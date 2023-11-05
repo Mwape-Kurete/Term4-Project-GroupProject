@@ -166,11 +166,10 @@ const movContainer_upcoming = document.getElementById('upcoming_mov_container');
           <p class="card-text popular_score">${popularity}</p>
           <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
 
-          <div class="button-group mt-2 d-grid gap-2 d-md-flex justify-content-md-end ">
+          <div class="watch-button mt-2 justify-content-md-end">
             <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
-            <button type="button" class="btn btn-light btn-sm watchNow" id="${id}" >Watch Now</button>
+            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
           </div>
-
 
       </div>
   </div>`
@@ -204,7 +203,7 @@ const movContainer_upcoming = document.getElementById('upcoming_mov_container');
 
           <div class="watch-button mt-2 justify-content-md-end">
             <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
-            <button type="button" class="btn btn-light btn-sm watchNow" id="${id}" >Watch Now</button>
+            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
           </div>
 
       </div>
@@ -238,7 +237,7 @@ const movContainer_upcoming = document.getElementById('upcoming_mov_container');
 
           <div class="watch-button mt-2 justify-content-md-end">
             <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
-            <button type="button" class="btn btn-light btn-sm watchNow" id="${id}" >Watch Now</button>
+            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
           </div>
 
       </div>
@@ -272,8 +271,8 @@ function displayUpcomingMovies(up_data){
 
         <div class="watch-button mt-2 justify-content-md-end">
             <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
-            <button type="button" class="btn btn-light btn-sm watchNow" id="${id}" >Watch Now</button>
-        </div>
+            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
+          </div>
 
     </div>
 </div>`
@@ -315,5 +314,19 @@ function storeMovie(idElement){
 	console.log(watchlistArray);
 
 	sessionStorage.setItem('movieArray_home', JSON.stringify(watchlistArray));
+
+}
+
+function watchNow(e){
+
+  const mov_id_watch = e.id; 
+
+  console.log(mov_id_watch);
+
+	//localStorage.setItem('single_movie_id', JSON.stringify(mov_id_watch));
+
+	window.location.href=`/pages/detail.html?id=${mov_id_watch}`;
+
+
 
 }
