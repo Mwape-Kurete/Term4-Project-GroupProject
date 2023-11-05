@@ -112,7 +112,8 @@ getMovieData(API_URL_);
 // Global Vars end 
 $(document).ready(function () {
 
-
+	
+    getUsername(arrUserDetail);
 
 });
 

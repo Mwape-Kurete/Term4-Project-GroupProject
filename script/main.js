@@ -40,6 +40,9 @@ window.addEventListener('scroll', function() {
 
     const watchlistArray = []; 
 
+
+    const arrUserDetail = JSON.parse(localStorage.getItem('formData'));
+
  $(document).ready(function() {
 
       console.log(POPULAR_URL + " and " + GEN_URL + "and " + NEW_URL + " and " + UPCOMING_URL);
@@ -49,6 +52,8 @@ window.addEventListener('scroll', function() {
       fetchPopularMovies(POPULAR_URL); 
       fetchNewMovies(NEW_URL); 
       fetchUpcomingMovies(UPCOMING_URL);
+
+      getUsername(arrUserDetail);
 
 });
 
@@ -327,6 +332,17 @@ function watchNow(e){
 
 	window.location.href=`/pages/detail.html?id=${mov_id_watch}`;
 
+
+
+}
+
+function getUsername(userDetails){
+
+  const navContainer = document.getElementById('username');
+
+  const username = userDetails[0]; 
+
+  navContainer.innerHTML = `Hello, ${username}`; 
 
 
 }
