@@ -235,10 +235,13 @@ function showMovieData(data) {
 
 	movieContainer.innerHTML = '';
 
+	
+
+	let idNum = 0;
+
 	data.forEach(movie => {
 
 		const { title, poster_path, release_date, vote_average, original_language, popularity, id } = movie;
-
 
 		const movieDataElement = document.createElement('div');
 
@@ -258,14 +261,17 @@ function showMovieData(data) {
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont mx-auto">
                                     <button class="btn btn-warning me-md-2 btnPlay icon-btn" type="button" onclick="getSingleMoviesId(this)"  id="${id}"><img
                                             src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
-                                    <button class="btn btn-warning me-md-2 btnBookmark icon-btn" type="button" onclick="getMovieId(this)" id="${id}"><img
-                                            src="../assets/icons/bookmark-check.svg" width="25px" height="25px" ></button>
+                                    <button class="btn btn-warning me-md-2 btnBookmark icon-btn" type="button" onclick="getMovieId(this, ${idNum})" id="${id}"><img
+                                            src="../assets/icons/bookmark-check.svg" width="25px" height="25px"  class="addedMovie"id="added${idNum}"></button>
                                 </div>
                             </div>
                         </div>
                     </div>`;
 
 		movieContainer.append(movieDataElement);
+
+		idNum = idNum + 1; 
+		console.log(idNum);
 
 	});
 
@@ -274,16 +280,20 @@ function showMovieData(data) {
 
 //get movie ID
 
-function getMovieId(element) {
+function getMovieId(element, num) {
+
+	const added = document.getElementById(`added${num}`);
 
 	const idVal = element.id;
 	var flag = true;
 
 	console.log(idVal);
 
-	if (arrWatchlistMovies.length === 0) {
+	if (arrWatchlistMovies.length === 0 && flag == true) {
 
 		arrWatchlistMovies.push(idVal);
+
+		added.src = '../assets/icons/bookmark-plus-fill.svg';
 
 	} else {
 
@@ -293,11 +303,15 @@ function getMovieId(element) {
 					arrWatchlistMovies.splice(idx, 1);
 
 					flag = false;
+
+					added.src = '../assets/icons/bookmark-check.svg';
 				}
 			})
-		} else {
+		} else if(flag == true){
 
 			arrWatchlistMovies.push(idVal);
+
+			added.src = '../assets/icons/bookmark-plus-fill.svg';
 		}
 	}
 
@@ -305,29 +319,7 @@ function getMovieId(element) {
 
 	sessionStorage.setItem('arrMovies', JSON.stringify(arrWatchlistMovies));
 
-	displayBookmarkedTrue(flag);
 
-}
-
-function displayBookmarkedTrue(val) {
-
-	const markedMovie = document.getElementsByClassName('.btnBookmark');
-
-	if (val == true) {
-
-		$(markedMovie).each(function() {
-			$(this).addClass('active');
-		})
-		
-
-		console.log(val);
-
-	} else if(val == false){
-
-		$(markedMovie).removeClass('active'); 
-
-		console.log(val);
-	}
 }
 
 

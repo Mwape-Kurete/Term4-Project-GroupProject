@@ -1,59 +1,59 @@
 
-window.addEventListener('scroll', function() {
-    const scrollPosition = window.scrollY;
-    const body = document.body;
+window.addEventListener('scroll', function () {
+  const scrollPosition = window.scrollY;
+  const body = document.body;
 
-    if (scrollPosition > 50) {
-        body.style.backgroundColor = '#566246';
-        document.querySelectorAll('h1').forEach(function(h1) {
-            h1.style.color = '#c17817'; 
-        });
-    } else {
-        body.style.backgroundColor = 'white'; 
-        document.querySelectorAll('h1').forEach(function(h1) {
-            h1.style.color = '#c17817'; 
-        });
-    }
+  if (scrollPosition > 50) {
+    body.style.backgroundColor = '#566246';
+    document.querySelectorAll('h1').forEach(function (h1) {
+      h1.style.color = '#c17817';
+    });
+  } else {
+    body.style.backgroundColor = 'white';
+    document.querySelectorAll('h1').forEach(function (h1) {
+      h1.style.color = '#c17817';
+    });
+  }
 });
 
 
 // IMPLEMENTING tmdB movie api 
 
 //Global variables
-    const API_KEY = '?api_key=c1a816ca66c3ef114eee6648c734672e';
-    const BASE_URL_GEN = 'https://api.themoviedb.org/3/movie/top_rated';
-    const BASE_URL_POPULAR = 'https://api.themoviedb.org/3/movie/popular';
-    const BASE_URL_NEW = 'https://api.themoviedb.org/3/movie/now_playing';
-    const BASE_URL_UPCOMING = 'https://api.themoviedb.org/3/movie/upcoming';
+const API_KEY = '?api_key=c1a816ca66c3ef114eee6648c734672e';
+const BASE_URL_GEN = 'https://api.themoviedb.org/3/movie/top_rated';
+const BASE_URL_POPULAR = 'https://api.themoviedb.org/3/movie/popular';
+const BASE_URL_NEW = 'https://api.themoviedb.org/3/movie/now_playing';
+const BASE_URL_UPCOMING = 'https://api.themoviedb.org/3/movie/upcoming';
 
-    // The base URL for movie images
+// The base URL for movie images
 
-    const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
-      
-    // The URL for fetching popular movies
-    const POPULAR_URL = BASE_URL_POPULAR + API_KEY;
-    const GEN_URL = BASE_URL_GEN + API_KEY;
-    const NEW_URL = BASE_URL_NEW + API_KEY;
-    const UPCOMING_URL = BASE_URL_UPCOMING + API_KEY;
+const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
-    //global arrays 
+// The URL for fetching popular movies
+const POPULAR_URL = BASE_URL_POPULAR + API_KEY;
+const GEN_URL = BASE_URL_GEN + API_KEY;
+const NEW_URL = BASE_URL_NEW + API_KEY;
+const UPCOMING_URL = BASE_URL_UPCOMING + API_KEY;
 
-    const watchlistArray = []; 
+//global arrays 
+
+const watchlistArray = [];
 
 
-    const arrUserDetail = JSON.parse(localStorage.getItem('formData'));
+const arrUserDetail = JSON.parse(localStorage.getItem('formData'));
 
- $(document).ready(function() {
+$(document).ready(function () {
 
-      console.log(POPULAR_URL + " and " + GEN_URL + "and " + NEW_URL + " and " + UPCOMING_URL);
-        // calling fetch's 
+  console.log(POPULAR_URL + " and " + GEN_URL + "and " + NEW_URL + " and " + UPCOMING_URL);
+  // calling fetch's 
 
-      fetchMovies(GEN_URL); 
-      fetchPopularMovies(POPULAR_URL); 
-      fetchNewMovies(NEW_URL); 
-      fetchUpcomingMovies(UPCOMING_URL);
+  fetchMovies(GEN_URL);
+  fetchPopularMovies(POPULAR_URL);
+  fetchNewMovies(NEW_URL);
+  fetchUpcomingMovies(UPCOMING_URL);
 
-      getUsername(arrUserDetail);
+  getUsername(arrUserDetail);
 
 });
 
@@ -69,204 +69,204 @@ const movContainer_upcoming = document.getElementById('upcoming_mov_container');
 
 
 // Fetching data from server
-  function fetchMovies(url_gen){
+function fetchMovies(url_gen) {
 
-    fetch(url_gen)
-       .then(response => response.json())
-       .then(data => {
+  fetch(url_gen)
+    .then(response => response.json())
+    .then(data => {
 
-        console.log(data.results);
+      console.log(data.results);
 
-          if(data.results.length !=0){
+      if (data.results.length != 0) {
 
-            displayMovies(data.results);
+        displayMovies(data.results);
 
-          }else {
+      } else {
 
-          }
-
-       }); 
-
-  }
-
-  function fetchPopularMovies(url_pop){
-
-    fetch(url_pop)
-       .then(response => response.json())
-       .then(data => {
-
-        console.log(data.results);
-
-          if(data.results.length !=0){
-
-            displayPopularMovies(data.results);
-
-          }else {
-
-          }
-
-       }); 
-  }
-
-  function fetchNewMovies(url_new){
-
-    fetch(url_new)
-       .then(response => response.json())
-       .then(data => {
-
-        console.log(data.results);
-
-          if(data.results.length !=0){
-
-            displayNewMovies(data.results);
-
-          }else {
-
-          }
-
-       }); 
-  }
-
-  function fetchUpcomingMovies(url_up){
-
-    fetch(url_up)
-       .then(response => response.json())
-       .then(data => {
-
-        console.log(data.results);
-
-          if(data.results.length !=0){
-
-            displayUpcomingMovies(data.results);
-
-          }else {
-
-          }
-
-       }); 
-  }
-
-
-
-  //DISPLAYING MOVIES 
-
-  function displayMovies(gen_data){
-
-    movContainer_gen.innerHTML = '';
-
-    gen_data.forEach(movie_results => {
-
-      const {title, poster_path, release_date, vote_average, original_language, popularity, id} = movie_results; 
-
-      const cardEl = document.createElement('div'); 
-
-      cardEl.classList.add('col', 'col-3', 'col-lg-3', 'col-md-4', 'py-4', 'd-flex', 'align-items-stretch', 'mov_card_full');
-
-      cardEl.innerHTML = `<div class="card rounded-4" style="width: 18rem;" id="${id}">
-      <img src="${poster_path ? IMAGE_URL + poster_path: "../assets/images/movie card 5.png" }" class="card-img-top" alt="Movie Poster not available" id="img_card">
-      <div class="card-body d-flex flex-column">
-          <h4 class="title">${title}</h4>
-          <h6 class="lang">${original_language}</h6>
-          <h6 class="year">${release_date}</h6>
-          <p class="card-text popular_score">${popularity}</p>
-          <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
-
-          <div class="watch-button mt-2 justify-content-md-end">
-            <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
-            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
-          </div>
-
-      </div>
-  </div>`
-
-      movContainer_gen.append(cardEl);
+      }
 
     });
-    
-  }
 
-  function displayPopularMovies(pop_data){
-   
-    movContainer_popular.innerHTML = '';
+}
 
-    pop_data.forEach(movie_results => {
+function fetchPopularMovies(url_pop) {
 
-      const {title, poster_path, release_date, vote_average, original_language, popularity, id} = movie_results; 
+  fetch(url_pop)
+    .then(response => response.json())
+    .then(data => {
 
-      const cardEl = document.createElement('div'); 
+      console.log(data.results);
 
-      cardEl.classList.add('col', 'col-3', 'col-lg-3', 'col-md-4', 'py-4', 'd-flex', 'align-items-stretch', 'mov_card_full');
+      if (data.results.length != 0) {
 
-      cardEl.innerHTML = `<div class="card rounded-4" style="width: 18rem;" id="${id}">
-      <img src="${poster_path ? IMAGE_URL + poster_path: "../assets/images/movie card 5.png" }" class="card-img-top" alt="Movie Poster not available" id="img_card">
-      <div class="card-body d-flex flex-column">
-          <h4 class="title">${title}</h4>
-          <h6 class="lang">${original_language}</h6>
-          <h6 class="year">${release_date}</h6>
-          <p class="card-text popular_score">${popularity}</p>
-          <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
+        displayPopularMovies(data.results);
 
-          <div class="watch-button mt-2 justify-content-md-end">
-            <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
-            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
-          </div>
+      } else {
 
-      </div>
-  </div>`
-
-      movContainer_popular.append(cardEl);
-
-    });
-  }
-
-  function displayNewMovies(new_data){
-
-    movContainer_new.innerHTML = '';
-
-    new_data.forEach(movie_results => {
-
-      const {title, poster_path, release_date, vote_average, original_language, popularity, id} = movie_results; 
-
-      const cardEl = document.createElement('div'); 
-
-      cardEl.classList.add('col', 'col-3', 'col-lg-3', 'col-md-4', 'py-4', 'd-flex', 'align-items-stretch', 'mov_card_full');
-
-      cardEl.innerHTML = `<div class="card rounded-4" style="width: 18rem;" id="${id}">
-      <img src="${poster_path ? IMAGE_URL + poster_path: "../assets/images/movie card 5.png" }" class="card-img-top" alt="Movie Poster not available" id="img_card">
-      <div class="card-body d-flex flex-column">
-          <h4 class="title">${title}</h4>
-          <h6 class="lang">${original_language}</h6>
-          <h6 class="year">${release_date}</h6>
-          <p class="card-text popular_score">${popularity}</p>
-          <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
-
-          <div class="watch-button mt-2 justify-content-md-end">
-            <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
-            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
-          </div>
-
-      </div>
-  </div>`
-
-      movContainer_new.append(cardEl);
+      }
 
     });
 }
 
-function displayUpcomingMovies(up_data){
+function fetchNewMovies(url_new) {
+
+  fetch(url_new)
+    .then(response => response.json())
+    .then(data => {
+
+      console.log(data.results);
+
+      if (data.results.length != 0) {
+
+        displayNewMovies(data.results);
+
+      } else {
+
+      }
+
+    });
+}
+
+function fetchUpcomingMovies(url_up) {
+
+  fetch(url_up)
+    .then(response => response.json())
+    .then(data => {
+
+      console.log(data.results);
+
+      if (data.results.length != 0) {
+
+        displayUpcomingMovies(data.results);
+
+      } else {
+
+      }
+
+    });
+}
+
+
+
+//DISPLAYING MOVIES 
+
+function displayMovies(gen_data) {
+
+  movContainer_gen.innerHTML = '';
+
+  gen_data.forEach(movie_results => {
+
+    const { title, poster_path, release_date, vote_average, original_language, popularity, id } = movie_results;
+
+    const cardEl = document.createElement('div');
+
+    cardEl.classList.add('col', 'col-3', 'col-lg-3', 'col-md-4', 'py-4', 'd-flex', 'align-items-stretch', 'mov_card_full');
+
+    cardEl.innerHTML = `<div class="card rounded-4" style="width: 18rem;" id="${id}">
+      <img src="${poster_path ? IMAGE_URL + poster_path : "../assets/images/movie card 5.png"}" class="card-img-top" alt="Movie Poster not available" id="img_card">
+      <div class="card-body d-flex flex-column">
+          <h4 class="title">${title}</h4>
+          <h6 class="lang">${original_language}</h6>
+          <h6 class="year">${release_date}</h6>
+          <p class="card-text popular_score">${popularity}</p>
+          <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
+
+          <div class="watch-button mt-2 justify-content-md-end">
+            <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
+            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
+          </div>
+
+      </div>
+  </div>`
+
+    movContainer_gen.append(cardEl);
+
+  });
+
+}
+
+function displayPopularMovies(pop_data) {
+
+  movContainer_popular.innerHTML = '';
+
+  pop_data.forEach(movie_results => {
+
+    const { title, poster_path, release_date, vote_average, original_language, popularity, id } = movie_results;
+
+    const cardEl = document.createElement('div');
+
+    cardEl.classList.add('col', 'col-3', 'col-lg-3', 'col-md-4', 'py-4', 'd-flex', 'align-items-stretch', 'mov_card_full');
+
+    cardEl.innerHTML = `<div class="card rounded-4" style="width: 18rem;" id="${id}">
+      <img src="${poster_path ? IMAGE_URL + poster_path : "../assets/images/movie card 5.png"}" class="card-img-top" alt="Movie Poster not available" id="img_card">
+      <div class="card-body d-flex flex-column">
+          <h4 class="title">${title}</h4>
+          <h6 class="lang">${original_language}</h6>
+          <h6 class="year">${release_date}</h6>
+          <p class="card-text popular_score">${popularity}</p>
+          <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
+
+          <div class="watch-button mt-2 justify-content-md-end">
+            <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
+            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
+          </div>
+
+      </div>
+  </div>`
+
+    movContainer_popular.append(cardEl);
+
+  });
+}
+
+function displayNewMovies(new_data) {
+
+  movContainer_new.innerHTML = '';
+
+  new_data.forEach(movie_results => {
+
+    const { title, poster_path, release_date, vote_average, original_language, popularity, id } = movie_results;
+
+    const cardEl = document.createElement('div');
+
+    cardEl.classList.add('col', 'col-3', 'col-lg-3', 'col-md-4', 'py-4', 'd-flex', 'align-items-stretch', 'mov_card_full');
+
+    cardEl.innerHTML = `<div class="card rounded-4" style="width: 18rem;" id="${id}">
+      <img src="${poster_path ? IMAGE_URL + poster_path : "../assets/images/movie card 5.png"}" class="card-img-top" alt="Movie Poster not available" id="img_card">
+      <div class="card-body d-flex flex-column">
+          <h4 class="title">${title}</h4>
+          <h6 class="lang">${original_language}</h6>
+          <h6 class="year">${release_date}</h6>
+          <p class="card-text popular_score">${popularity}</p>
+          <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
+
+          <div class="watch-button mt-2 justify-content-md-end">
+            <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
+            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
+          </div>
+
+      </div>
+  </div>`
+
+    movContainer_new.append(cardEl);
+
+  });
+}
+
+function displayUpcomingMovies(up_data) {
 
   movContainer_upcoming.innerHTML = '';
 
   up_data.forEach(movie_results => {
 
-    const {title, poster_path, release_date, vote_average, original_language, popularity, id} = movie_results; 
+    const { title, poster_path, release_date, vote_average, original_language, popularity, id } = movie_results;
 
-    const cardEl = document.createElement('div'); 
+    const cardEl = document.createElement('div');
 
     cardEl.classList.add('col', 'col-3', 'col-lg-3', 'col-md-4', 'py-4', 'd-flex', 'align-items-stretch', 'mov_card_full');
 
     cardEl.innerHTML = `<div class="card rounded-4" style="width: 18rem;" id="${id}">
-    <img src="${poster_path ? IMAGE_URL + poster_path: "../assets/images/movie card 5.png" }" class="card-img-top" alt="Movie Poster not available" id="img_card">
+    <img src="${poster_path ? IMAGE_URL + poster_path : "../assets/images/movie card 5.png"}" class="card-img-top" alt="Movie Poster not available" id="img_card">
     <div class="card-body d-flex flex-column">
         <h4 class="title">${title}</h4>
         <h6 class="lang">${original_language}</h6>
@@ -288,61 +288,61 @@ function displayUpcomingMovies(up_data){
 }
 
 
-function storeMovie(idElement){
+function storeMovie(idElement) {
 
-  const movieID = idElement.id; 
+  const movieID = idElement.id;
 
-  var isChecked = true; 
+  var isChecked = true;
 
-  console.log(movieID); 
+  console.log(movieID);
 
   if (watchlistArray.length === 0) {
 
-		watchlistArray.push(movieID);
+    watchlistArray.push(movieID);
 
-	} else {
+  } else {
 
-		if (watchlistArray.includes(movieID)) {
-			watchlistArray.forEach((id, idx) => {
-				if (id === movieID) {
-					watchlistArray.splice(idx, 1);
+    if (watchlistArray.includes(movieID)) {
+      watchlistArray.forEach((id, idx) => {
+        if (id === movieID) {
+          watchlistArray.splice(idx, 1);
 
-					flag = false;
-				}
-			})
-		} else {
+          isChecked = false;
+        }
+      })
+    } else {
 
-			watchlistArray.push(movieID);
-		}
-	}
+      watchlistArray.push(movieID);
+    }
+  }
 
-	console.log(watchlistArray);
+  console.log(watchlistArray);
 
-	sessionStorage.setItem('movieArray_home', JSON.stringify(watchlistArray));
+  sessionStorage.setItem('movieArray_home', JSON.stringify(watchlistArray));
 
 }
 
-function watchNow(e){
+function watchNow(e) {
 
-  const mov_id_watch = e.id; 
+  const mov_id_watch = e.id;
 
   console.log(mov_id_watch);
 
-	//localStorage.setItem('single_movie_id', JSON.stringify(mov_id_watch));
+  //localStorage.setItem('single_movie_id', JSON.stringify(mov_id_watch));
 
-	window.location.href=`/pages/detail.html?id=${mov_id_watch}`;
+  window.location.href = `/pages/detail.html?id=${mov_id_watch}`;
 
 
 
 }
 
-function getUsername(userDetails){
+function getUsername(userDetails) {
 
   const navContainer = document.getElementById('username');
 
-  const username = userDetails[0]; 
+  const username = userDetails[0];
 
-  navContainer.innerHTML = `Hello, ${username}`; 
+  navContainer.innerHTML = `Hello, ${username}`;
 
 
 }

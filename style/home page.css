@@ -207,3 +207,29 @@ body {
     bottom: 0 !important;
     position: absolute;
   }
+
+  /* scroll bar */
+/* --------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #FFF1D6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #566246;
+  width: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #353d2b;
+}
+/* scrollbar end */
