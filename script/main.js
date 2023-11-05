@@ -1,4 +1,6 @@
 
+
+
 window.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY;
     const body = document.body;
@@ -28,6 +30,8 @@ window.addEventListener('scroll', function() {
 
     // The base URL for movie images
 
+    
+
     const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
       
     // The URL for fetching popular movies
@@ -51,6 +55,10 @@ window.addEventListener('scroll', function() {
       fetchUpcomingMovies(UPCOMING_URL);
 
 });
+
+
+
+
 
 //CALLING INNER HTML ELEMENTS
 
@@ -317,3 +325,66 @@ function storeMovie(idElement){
 	sessionStorage.setItem('movieArray_home', JSON.stringify(watchlistArray));
 
 }
+
+// Add these variables at the top with your other global variables
+const HERO_SLIDER_CONTAINER = document.getElementById('hero-slider');
+
+// Function to populate the hero slider
+function populateHeroSlider(movies) {
+  HERO_SLIDER_CONTAINER.innerHTML = '';
+
+  movies.forEach((movie) => {
+    const { title, poster_path, id } = movie;
+
+    const slideEl = document.createElement('div');
+    slideEl.classList.add('swiper-slide');
+
+    slideEl.innerHTML = `
+      <div class="hero-slide">
+        <img src="${poster_path ? IMAGE_URL + poster_path : '../assets/images/movie card 5.png'}" alt="Movie Poster not available" class="hero-image">
+        <div class="hero-content">
+          <h2>${title}</h2>
+          <button class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)">Add to watchlist</button>
+          <button class="btn btn-light btn-sm watchNow" id="${id}">Watch Now</button>
+        </div>
+      </div>
+    `;
+
+    HERO_SLIDER_CONTAINER.appendChild(slideEl);
+  });
+
+  // Initialize Swiper with autoplay
+  new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 5000, // Delay in milliseconds (5 seconds)
+    },
+  });
+}
+
+// Update your fetchMovies function to call populateHeroSlider
+function fetchMovies(url_gen) {
+  fetch(url_gen)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.results);
+
+      if (data.results.length !== 0) {
+        // Display movies in the hero slider
+        populateHeroSlider(data.results);
+        // Display other movies
+        displayMovies(data.results);
+      } else {
+        // Handle no results
+      }
+    });
+}
+
+// Call the fetchMovies function to populate the hero slider
+fetchMovies(GEN_URL);
+
