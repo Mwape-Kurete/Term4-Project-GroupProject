@@ -235,8 +235,6 @@ function showMovieData(data) {
 
 	movieContainer.innerHTML = '';
 
-	
-
 	let idNum = 0;
 
 	data.forEach(movie => {

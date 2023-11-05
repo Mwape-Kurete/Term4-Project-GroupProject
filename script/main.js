@@ -26,6 +26,8 @@ const BASE_URL_POPULAR = 'https://api.themoviedb.org/3/movie/popular';
 const BASE_URL_NEW = 'https://api.themoviedb.org/3/movie/now_playing';
 const BASE_URL_UPCOMING = 'https://api.themoviedb.org/3/movie/upcoming';
 
+let idNum_counter = 0;
+
 // The base URL for movie images
 
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
@@ -154,6 +156,8 @@ function displayMovies(gen_data) {
 
   movContainer_gen.innerHTML = '';
 
+  
+
   gen_data.forEach(movie_results => {
 
     const { title, poster_path, release_date, vote_average, original_language, popularity, id } = movie_results;
@@ -171,15 +175,21 @@ function displayMovies(gen_data) {
           <p class="card-text popular_score">${popularity}</p>
           <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
 
-          <div class="watch-button mt-2 justify-content-md-end">
-            <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
-            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
-          </div>
+          <!-- icons -->
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont mx-auto">
+                                    <button class="btn btn-warning me-md-2 btnPlay icon-btn" type="button" onclick="watchNow(this)"  id="${id}"><img
+                                            src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
+                                    <button class="btn btn-warning me-md-2 btnBookmark icon-btn" type="button" onclick="storeMovie(this, ${idNum_counter})" id="${id}"><img
+                                            src="../assets/icons/bookmark-check.svg" width="25px" height="25px"  class="addedMovie"id="added${idNum_counter}"></button>
+                                </div>
 
       </div>
   </div>`
 
     movContainer_gen.append(cardEl);
+
+    idNum_counter = idNum_counter + 1;
+    console.log(idNum_counter);
 
   });
 
@@ -188,6 +198,8 @@ function displayMovies(gen_data) {
 function displayPopularMovies(pop_data) {
 
   movContainer_popular.innerHTML = '';
+
+  
 
   pop_data.forEach(movie_results => {
 
@@ -206,15 +218,21 @@ function displayPopularMovies(pop_data) {
           <p class="card-text popular_score">${popularity}</p>
           <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
 
-          <div class="watch-button mt-2 justify-content-md-end">
-            <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
-            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
-          </div>
+          <!-- icons -->
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont mx-auto">
+                                    <button class="btn btn-warning me-md-2 btnPlay icon-btn" type="button" onclick="watchNow(this)"  id="${id}"><img
+                                            src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
+                                    <button class="btn btn-warning me-md-2 btnBookmark icon-btn" type="button" onclick="storeMovie(this, ${idNum_counter})" id="${id}"><img
+                                            src="../assets/icons/bookmark-check.svg" width="25px" height="25px"  class="addedMovie"id="added${idNum_counter}"></button>
+                                </div>
 
       </div>
   </div>`
 
     movContainer_popular.append(cardEl);
+
+    idNum_counter = idNum_counter + 1;
+    console.log(idNum_counter);
 
   });
 }
@@ -222,6 +240,8 @@ function displayPopularMovies(pop_data) {
 function displayNewMovies(new_data) {
 
   movContainer_new.innerHTML = '';
+
+  
 
   new_data.forEach(movie_results => {
 
@@ -240,15 +260,21 @@ function displayNewMovies(new_data) {
           <p class="card-text popular_score">${popularity}</p>
           <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
 
-          <div class="watch-button mt-2 justify-content-md-end">
-            <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
-            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
-          </div>
+          <!-- icons -->
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont mx-auto">
+                                    <button class="btn btn-warning me-md-2 btnPlay icon-btn" type="button" onclick="watchNow(this)"  id="${id}"><img
+                                            src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
+                                    <button class="btn btn-warning me-md-2 btnBookmark icon-btn" type="button" onclick="storeMovie(this, ${idNum_counter})" id="${id}"><img
+                                            src="../assets/icons/bookmark-check.svg" width="25px" height="25px"  class="addedMovie"id="added${idNum_counter}"></button>
+                                </div>
 
       </div>
   </div>`
 
     movContainer_new.append(cardEl);
+
+    idNum_counter = idNum_counter + 1;
+    console.log(idNum_counter);
 
   });
 }
@@ -256,6 +282,8 @@ function displayNewMovies(new_data) {
 function displayUpcomingMovies(up_data) {
 
   movContainer_upcoming.innerHTML = '';
+
+  
 
   up_data.forEach(movie_results => {
 
@@ -274,23 +302,30 @@ function displayUpcomingMovies(up_data) {
         <p class="card-text popular_score">${popularity}</p>
         <p class="text-body-tertiary rating">Rating - ${vote_average}</p>
 
-        <div class="watch-button mt-2 justify-content-md-end">
-            <button type="button" class="btn btn-light btn-sm watchlist" id="${id}" onclick="storeMovie(this)" >Add to watchlist</button>
-            <button type="button" class="btn btn-light btn-sm watchNow" onclick="watchNow(this)" id="${id}" >Watch Now</button>
-          </div>
+        <!-- icons -->
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end icons-cont mx-auto">
+                                    <button class="btn btn-warning me-md-2 btnPlay icon-btn" type="button" onclick="watchNow(this)"  id="${id}"><img
+                                            src="../assets/icons/play-circle-fill.svg" width="25px" height="25px" id="play"></button>
+                                    <button class="btn btn-warning me-md-2 btnBookmark icon-btn" type="button" onclick="storeMovie(this, ${idNum_counter})" id="${id}"><img
+                                            src="../assets/icons/bookmark-check.svg" width="25px" height="25px"  class="addedMovie"id="added${idNum_counter}"></button>
+                                </div>
 
     </div>
 </div>`
 
     movContainer_upcoming.append(cardEl);
 
+    idNum_counter = idNum_counter + 1;
+    console.log(idNum_counter);
+
   });
 }
 
 
-function storeMovie(idElement) {
+function storeMovie(idElement, num_count) {
 
   const movieID = idElement.id;
+  const added_mov = document.getElementById(`added${num_count}`);
 
   var isChecked = true;
 
@@ -300,6 +335,8 @@ function storeMovie(idElement) {
 
     watchlistArray.push(movieID);
 
+    added_mov.src = '../assets/icons/bookmark-plus-fill.svg';
+
   } else {
 
     if (watchlistArray.includes(movieID)) {
@@ -308,11 +345,15 @@ function storeMovie(idElement) {
           watchlistArray.splice(idx, 1);
 
           isChecked = false;
+
+          added_mov.src = '../assets/icons/bookmark-check.svg';
         }
       })
     } else {
 
       watchlistArray.push(movieID);
+
+      added_mov.src = '../assets/icons/bookmark-plus-fill.svg';
     }
   }
 
