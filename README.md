@@ -1,9 +1,9 @@
 Table of Contents
-- [Sign In](#Sign In)
-- [Sign Up](#Sign Up)
--[Home Page](#Home Page)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
+- Sign In
+- Sign UP
+-Home Page
+- Watchlist
+- Library
 - [License](#license)
 
 Features
