@@ -1,11 +1,10 @@
 Table of Contents
-Description
-Features
-Installation
-Usage
-Demo
-Contributing
-License
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [License](#license)
 
 Features
 **Sign In and Sign Up**
