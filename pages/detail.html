@@ -23,6 +23,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link  href="https://fonts.googleapis.com/css2?family=Alice&family=Coustard:wght@900&family=Libre+Franklin:ital,wght@0,600;1,300&family=Pridi:wght@200;500;600&display=swap"
   rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <!-- 
     - custom css link
@@ -46,17 +48,31 @@
   <header class="header">
 
     <a href="../index.html" class="logo">
-      <img src="../assets/logo/cs_logo_design.svg" width="45" height="36" alt="logo">
+      <img src="../assets/logo/cs_logo_design.svg" class="lg" height="30" width="24"  alt="logo">
 
       <div class="title">
         <h1>CineScape</h1>
       </div>
     </a>
-
     
-
-    
-
+    <ul class="nav nav-underline justify-content-end">
+      <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="../index.html">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="../pages/library.html">Library</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link active nav-link-custom" aria-current="page" href="detail.html">movie</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link disabled nav-link-custom" aria-disabled="true" id="username"> username </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link nav-link-custom" href="../sign in.html">Log Out</a>
+      </li>
+      
+    </ul>
   </header>
 
 

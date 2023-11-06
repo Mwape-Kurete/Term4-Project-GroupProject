@@ -106,7 +106,7 @@ $(document).ready(function () {
   
           // If authentication is successful, redirect to index.html
           console.log('Authentication successful. Redirecting to index.html');
-          window.location.href = 'index.html';
+          window.location.href = '../index.html';
         }
       }
   

@@ -9,6 +9,8 @@ form.addEventListener('submit', e => {
 
     if (validateInputs()) {
         saveFormDataToLocalStorage();
+
+        window.location.href="../index.html";
     }
 });
 
@@ -97,9 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Update the content of the "user-greeting" element with the stored username
         userGreeting.textContent = `Hello, ${userData.username}!`;
 
-        // You can also hide or show elements in your navbar based on whether user data exists
-        // For example, you can hide the login and registration links and show a "Log Out" link.
-        // You will need to adjust your HTML structure accordingly.
+      
     }
 });
 
