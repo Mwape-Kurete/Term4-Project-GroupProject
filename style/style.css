@@ -68,10 +68,48 @@
   
   }
 
+
+.header{
+  background-color: #566246;
+  color:  #FFF1D6;
+}
+
+.nav-link-custom {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  text-decoration: none;
+  color: #C17817;
+}
+
+.nav-link-custom:hover {
+  color: #650D1B;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+ul {
+  margin-right: 40px;
+}
+
+.active {
+  color: #FFF1D6;
+}
+
+.nav-underline .nav-link.active,
+.nav-underline .show>.nav-link {
+    font-weight: 700;
+    color: #DDC192;
+    border-bottom-color: currentcolor;
+}
+
+.lg{
+  
+  
+}
+
 .title h1{
-  margin-left: 800px;
+  margin-left: 600px;
   font-family: 'Coustard', serif;
   margin-top: -100px;
+  font-size: 50px;
 }
   
   
