@@ -1,5 +1,3 @@
-# Term4-Project-GroupProject
-Collaborative group Repo for DV100 Term 4
 Table of Contents
 Description
 Features
@@ -8,37 +6,37 @@ Usage
 Demo
 Contributing
 License
+Description
+This repository is a collaborative group project created for DV100 Term 4. It is designed to provide a platform for users to explore movies, create accounts, sign in securely, and access protected content or features.
 
-**Sign in** 
+Features
+Sign In and Sign Up
+Sign In: Provides a user-friendly sign-in experience, allowing users to securely access their accounts and protected content.
+Sign Up: Enables users to create new accounts for accessing the platform's features.
+Home Page
+Home Page
 
-Provides a user-friendly Sign-In and Sign-Up experience. It allows users to create accounts, sign in securely, and access protected content or features.
+The home page offers an immersive experience with the following sections:
 
+Recommended Movies: Personalized movie recommendations based on user preferences.
+Newly Released: Showcasing the latest movie releases.
+Popular Movies: Displaying currently trending movies.
+Upcoming Movies: Providing information about soon-to-be-released movies.
+Each movie is represented by a card featuring an image, title, language, release year, popularity score, and rating.
 
-**Sign Up**
+Watchlist
+Watchlist
 
+The watchlist feature allows users to:
 
+Save and manage a list of movies they plan to watch.
+Conveniently keep track of their movie interests.
+Enhance their experience by personalizing their movie collection.
+Library
+Library
 
-**Home Page**
+In the library section, users can:
 
-![image](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125281158/20d8c355-3a88-4bf5-93e9-3385ba155650)
-
-**Recommended Movies:** These movies may be recommended based on user preferences.
-**Newly Released:** Showcasing newly released movies
-**Popular Movies:** Displaying movies that are currently popular
-**Upcoming Movies:** Providing information about movies that will be released soon
-Each movie in the carousel is represented by a movie card.
-The card typically includes a movie image, title, language, release year, popularity score, and rating.
-
-![image](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125281158/f262bf46-8b44-4e6a-bfd0-3f45bb403e48)
-
-
-
-
-**Watchlist**
-
-![image](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125281158/2cf2f2cf-9a2e-49eb-979c-027830d09c5f)
-The watchlist feature allows users to save and manage a list of movies they want to watch. It's a convenient way for users to keep track of the movies they are interested in, and it enhances their experience on our platform.
-
-**Library**
-![image](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125281158/9dea7a60-90d7-4377-a8e8-b96cfd054f81)
-Users can find movies by using the filter to sort the movies into categories.
+Sort movies into categories using filters.
+Find movies based on their preferences.
+Explore a diverse collection of movies available on the platform.
