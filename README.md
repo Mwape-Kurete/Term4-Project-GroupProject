@@ -22,10 +22,10 @@ Provides a user-friendly Sign-In and Sign-Up experience. It allows users to crea
 
 ![image](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125281158/20d8c355-3a88-4bf5-93e9-3385ba155650)
 
-**Recommended Movies:** These movies may be recommended based on user preferences.
-**Newly Released:** Showcasing newly released movies
-**Popular Movies:** Displaying movies that are currently popular
-**Upcoming Movies:** Providing information about movies that will be released soon
++**Recommended Movies:** These movies may be recommended based on user preferences.
++**Newly Released:** Showcasing newly released movies
++**Popular Movies:** Displaying movies that are currently popular
++**Upcoming Movies:** Providing information about movies that will be released soon
 Each movie in the carousel is represented by a movie card.
 The card typically includes a movie image, title, language, release year, popularity score, and rating.
 
