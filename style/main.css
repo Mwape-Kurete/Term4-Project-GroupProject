@@ -51,8 +51,11 @@ ul {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
 
+    .movie-lib-grid{
+        padding-left: 5%; 
+        padding-right: 5%; 
+    }
 }
-
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { 
 
