@@ -16,10 +16,10 @@ Sign Up: Enables users to create new accounts for accessing the platform's featu
 
 The home page offers an immersive experience with the following sections:
 
-Recommended Movies: Personalised movie recommendations based on user preferences
-Newly Released: Showcasing the latest movie releases.
-Popular Movies: Displaying currently trending movies.
-Upcoming Movies: Providing information about soon-to-be-released movies.
+-Recommended Movies: Personalised movie recommendations based on user preferences
+-Newly Released: showcasing the latest movie releases.
+-Popular Movies: Displaying currently trending movies.
+-Upcoming Movies: Providing information about soon-to-be-released movies.
 Each movie is represented by a card featuring an image, title, language, release year, popularity score, and rating.
 
 **Watchlist**
