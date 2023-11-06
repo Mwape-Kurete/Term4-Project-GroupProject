@@ -111,6 +111,9 @@ const saveFormDataToLocalStorage = () => {
         password: password.value.trim(),
     };
 
+   
+
+
     // Convert the object to a JSON string and store it in local storage
     localStorage.setItem('formData', JSON.stringify(formData));
 };
