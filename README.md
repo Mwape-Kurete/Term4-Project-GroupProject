@@ -37,4 +37,5 @@ The card typically includes a movie image, title, language, release year, popula
 **Watchlist**
 
 ![image](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125281158/2cf2f2cf-9a2e-49eb-979c-027830d09c5f)
+The watchlist feature allows users to save and manage a list of movies they want to watch. It's a convenient way for users to keep track of the movies they are interested in, and it enhances their experience on our platform.
 
