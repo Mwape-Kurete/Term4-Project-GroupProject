@@ -235,7 +235,7 @@ function getUsername(userDetails){
 
     const navContainer = document.getElementById('username');
 
-    const username = userDetails[1]; 
+    const username = userDetails[0]; 
 
     navContainer.innerHTML = `Hello, ${username}`; 
 
