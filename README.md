@@ -4,7 +4,7 @@ Table of Contents
 -Home Page
 - Watchlist
 - Library
-- [License](#license)
+- Plagiarism Declaration
 
 Features
 **Sign In and Sign Up**
@@ -54,6 +54,7 @@ The submitted project has not been copied from any current or previous student a
 I have not let anybody use, submit and / or copy my work for evaluation or submission purposes.
 I am aware that plagiarism is a criminal offence and that Open Window reserves the right to conduct a disciplinary hearing, take legal action or even expel me should I be found guilty of plagiarism.
 Signed
-Pierre Ferreira 221352
-Mwape Kurete 231115
-Lebogang Hlongwane 231214
+
+-Pierre Ferreira 221352
+-Mwape Kurete 231115
+-Lebogang Hlongwane 231214
