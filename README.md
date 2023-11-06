@@ -6,8 +6,6 @@ Usage
 Demo
 Contributing
 License
-Description
-This repository is a collaborative group project created for DV100 Term 4. It is designed to provide a platform for users to explore movies, create accounts, sign in securely, and access protected content or features.
 
 Features
 Sign In and Sign Up
