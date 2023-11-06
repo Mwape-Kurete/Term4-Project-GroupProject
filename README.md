@@ -1,7 +1,7 @@
 Table of Contents
 - Sign In
 - Sign UP
--Home Page
+- Home Page
 - Watchlist
 - Library
 - Plagiarism Declaration
@@ -19,6 +19,9 @@ Each movie is represented by a card featuring an image, title, language, release
 
 **Watchlist**
 ![Screenshot 2023-11-06 124612](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125281158/d579112b-39e2-4933-be0f-d161d2c73fff)
+
+![image](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125281158/ff9be650-c1af-4e3b-b4ed-2b903a6a90f7)
+
 
 The watchlist feature allows users to:
 
