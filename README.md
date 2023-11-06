@@ -1,7 +1,7 @@
 Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Examples](#examples)
+- [Sign In](#Sign In)
+- [Sign Up](#Sign Up)
+-[Home Page](#Home Page)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 - [License](#license)
