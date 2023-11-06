@@ -247,7 +247,7 @@ function showMovieData(data) {
 
 		movieDataElement.innerHTML = `
                     <div class="card rounded-4" style="width: 18rem;">
-                        <img src="${poster_path ? IMAGE_URL + poster_path : "../assets/images/download (7).jpeg"}" class="rounded-4 mov-movie-poster">
+                        <img src="${poster_path ? IMAGE_URL_ + poster_path : "../assets/images/download (7).jpeg"}" class="rounded-4 mov-movie-poster">
                             <div class="card-content">
                                 <h4 class="lblMovName py-3" id="title">${title}</h4>
                                 <h5 class="lblMeta" id="year">${release_date}</h5>
