@@ -6,11 +6,6 @@ Table of Contents
 - Library
 - Plagiarism Declaration
 
-Features
-**Sign In and Sign Up**
-Sign In: Provides a user-friendly sign-in experience, allowing users to securely access their accounts and protected content.
-Sign Up: Enables users to create new accounts for accessing the platform's features.
-
 **Home Page**
 ![Screenshot 2023-11-06 123637](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125281158/ee3cede1-642e-461f-be3d-0aa7e3c947b3)
 
