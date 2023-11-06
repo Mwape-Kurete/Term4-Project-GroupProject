@@ -40,6 +40,25 @@ Sort movies into categories using filters.
 Find movies based on their preferences.
 Explore a diverse collection of movies available on the platform.
 
+**Sign Up**
+![image](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125279827/f21dfb2a-c053-4e7c-aa0c-e635182e5c6e)
+
+In the Sign Up page: 
+
+A user can enter their details according to the required fields
+The entered data is then checked and validated 
+Once the validation process is complete the user can then click the sign up button and is redirected to the index.html 
+
+
+**Sign In** 
+![image](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125279827/3bcce68a-2dee-4f26-89f3-9c9bc85d20a8)
+
+In the Sign In page: 
+
+Having already created an account users can log back into the website using their stored log in information 
+Once they have signed in users users details are stored locally. 
+
+
 **Plagarism Document:**
 OW Plagiarism Declaration
 
