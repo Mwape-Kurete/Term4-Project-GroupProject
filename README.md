@@ -24,7 +24,6 @@ Upcoming Movies: Providing information about soon-to-be-released movies.
 Each movie is represented by a card featuring an image, title, language, release year, popularity score, and rating.
 
 Watchlist
-Watchlist
 ![Screenshot 2023-11-06 124612](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125281158/d579112b-39e2-4933-be0f-d161d2c73fff)
 
 The watchlist feature allows users to:
@@ -32,10 +31,9 @@ The watchlist feature allows users to:
 Save and manage a list of movies they plan to watch.
 Conveniently keep track of their movie interests.
 Enhance their experience by personalising their movie collection.
-Library
-![Uploading Screenshot 2023-11-06 125204.png…]()
 
 Library
+![image](https://github.com/Mwape-Kurete/Term4-Project-GroupProject/assets/125281158/71e3cf8e-85be-4c71-ac75-a5aeed57a182)
 
 In the library section, users can:
 
