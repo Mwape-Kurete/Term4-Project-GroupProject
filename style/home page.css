@@ -2,6 +2,7 @@
 
 body{
     background-color: white;
+    overflow-x: hidden;
 }
 
 .navbar-custom{
@@ -61,7 +62,20 @@ h5{
     color: #E6F2E9;
 }
 
+.hero-image {
+  width: 800px;
+  height: 600px;
+  margin-top: 50px;
+  margin-left: 400px;
+  border-radius: 15%;
+  
+}
 
+.webName{
+    color: #c17817;
+    font-family: 'Coustard', serif;
+    text-align: center;
+}
 
 .newly-released-content {
     background-color: #E6F2E9;
